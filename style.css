@@ -3,16 +3,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #D9D9D9;
+    background-color: #D1DAEB; /* Updated Background Color */
     color: #333;
     line-height: 1.6;
 }
 
 /* Logo Styling */
 .logo {
-    max-width: 150px; /* Size of the logo */
+    max-width: 150px;
     height: auto;
-    margin-right: 20px; /* Adds space between the logo and text */
+    margin-right: 20px;
 }
 
 /* Header Styling */
@@ -73,6 +73,15 @@ body {
     width: 30%;
     margin: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text in founder cards */
+}
+
+.founder-headshot {
+    border-radius: 50%; /* Circular headshot */
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures image fits the container properly */
+    margin-bottom: 15px;
 }
 
 .founder h3 {
@@ -99,6 +108,7 @@ body {
 .cta-section {
     background-color: #ffffff;
     padding: 40px;
+    text-align: center; /* Center the text in CTA sections */
 }
 
 .cta-section h2 {
