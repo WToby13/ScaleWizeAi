@@ -3,14 +3,20 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #D9D9D9; /* Updated background color */
     color: #333;
     line-height: 1.6;
 }
 
+/* Logo Styling */
+.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
 /* Header Styling */
 .main-header {
-    background-color: #4CAF50;
+    background-color: #00205B; /* Primary company color */
     color: white;
     padding: 50px;
     text-align: center;
@@ -66,7 +72,7 @@ body {
 
 .founder a {
     text-decoration: none;
-    color: #4CAF50;
+    color: #00205B; /* Primary color for LinkedIn links */
     font-weight: bold;
 }
 
@@ -91,7 +97,7 @@ body {
 }
 
 .cta-button {
-    background-color: #4CAF50;
+    background-color: #00205B; /* Primary company color */
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -101,6 +107,6 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #45a049;
+    background-color: #001A4A; /* Darker shade for hover */
     text-decoration: none;
 }
