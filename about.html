@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Adeptable Ai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    </script>
+
+    <!-- About Us Content -->
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Harness the full potential and transformative power of AI. We guide businesses through the complexities of emerging, innovative technologies...</p>
+    </section>
+</body>
+</html>
