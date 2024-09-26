@@ -64,20 +64,54 @@ header nav ul li a:hover {
     background-color: #f4f4f4;
 }
 
-/* Responsive adjustments (optional) */
+/* Responsive adjustments */
 @media (max-width: 768px) {
+    /* Adjust header layout for smaller screens */
     .header-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
+    /* Center the logo, nav, and contact button */
+    .logo img {
+        margin-bottom: 15px; /* Adds some spacing below the logo */
+    }
+
+    /* Stack nav items vertically on mobile */
     header nav ul {
-        justify-content: flex-start;
-        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
     }
 
-    .contact-button {
-        margin-top: 10px;
+    header nav ul li {
+        margin: 10px 0; /* Space between each link */
+    }
+
+    /* Make the contact button full-width for mobile */
+    .contact-button .btn-contact {
+        padding: 12px 24px;
+        width: 100%; /* Button takes up the entire width on mobile */
+        text-align: center; /* Ensure the button text is centered */
+        margin-top: 15px; /* Adds space between button and navigation */
+    }
+}
+
+/* Even smaller screen adjustments (e.g., phones under 500px wide) */
+@media (max-width: 500px) {
+    /* Reduce font size for navigation and button */
+    header nav ul li a {
+        font-size: 16px;
+    }
+
+    .contact-button .btn-contact {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    /* Reduce logo size a bit */
+    .logo img {
+        width: 120px; /* Slightly smaller logo for very small screens */
     }
 }
 
