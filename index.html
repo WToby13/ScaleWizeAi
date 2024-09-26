@@ -8,17 +8,23 @@
 </head>
 <body>
 
-    <!-- Header: Introduction -->
-    <header class="main-header">
-        <div class="header-content">
-            <img src="AdeptableAi.png" alt="Adeptable AI Logo" class="logo">
-            <div class="header-text">
-                <h1>Adeptable</h1>
-                <p>Adept, adaptable and applicable Ai Solutions</p>
-            </div>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
+    <script>
+        // Load the header dynamically from header.html
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    </script>
+
+    <!-- Header: Introduction -->
+    <section class="hero">
+        <h1>Adeptable</h1>
+        <p>Adept, adaptable, and applicable Ai Solutions</p>
+    </section>
+        
     <!-- About Us Section -->
     <section id="about-us" class="section about-us-section">
         <h2>About Us</h2>
