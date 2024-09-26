@@ -15,6 +15,37 @@ body {
     margin-right: 20px;
 }
 
+/* Example CSS for the header */
+header {
+    background-color: #00205B;
+    padding: 20px;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
 /* Header Styling */
 .main-header {
     background-color: #00205B;
