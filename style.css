@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #D1DAEB; /* Updated Background Color */
+    background-color: #D1DAEB; /* Background color */
     color: #333;
     line-height: 1.6;
 }
@@ -52,6 +52,21 @@ body {
     text-align: center;
 }
 
+#about-us {
+    background-color: #f4f4f4;
+}
+
+#about-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about-us p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+/* Founders Section */
 #founders {
     background-color: #f0f0f0;
 }
@@ -73,14 +88,14 @@ body {
     width: 30%;
     margin: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center text in founder cards */
+    text-align: center;
 }
 
 .founder-headshot {
     border-radius: 50%; /* Circular headshot */
     width: 150px;
     height: 150px;
-    object-fit: cover; /* Ensures image fits the container properly */
+    object-fit: cover;
     margin-bottom: 15px;
 }
 
