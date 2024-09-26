@@ -51,7 +51,7 @@ header nav ul li a:hover {
 
 /* "Contact Us" button on the right */
 .contact-button .btn-contact {
-    background-color: #FFD700;
+    background-color: #ffffff;
     color: #00205B;
     padding: 10px 20px;
     border-radius: 5px;
@@ -61,7 +61,7 @@ header nav ul li a:hover {
 }
 
 .contact-button .btn-contact:hover {
-    background-color: #FFC107;
+    background-color: #f4f4f4;
 }
 
 /* Responsive adjustments (optional) */
