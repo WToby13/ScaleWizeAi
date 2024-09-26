@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Adeptable Ai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    </script>
+
+    <!-- Contact Us Content -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Reach out to discuss how AI can transform your business.</p>
+        <!-- Add your form or contact details here -->
+    </section>
+</body>
+</html>
