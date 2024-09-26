@@ -8,27 +8,31 @@ body {
     line-height: 1.6;
 }
 
-/* Logo Styling */
-.logo {
-    max-width: 150px;
-    height: auto;
-    margin-right: 20px;
-}
-
-/* Example CSS for the header */
+/* General header styling */
 header {
     background-color: #00205B;
-    padding: 20px;
+    padding: 15px 30px;
 }
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo on the left */
 header .logo img {
     width: 150px;
 }
 
+/* Navigation links in the center */
 header nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
 }
 
 header nav ul li {
@@ -45,36 +49,36 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-
-/* Header Styling */
-.main-header {
-    background-color: #00205B;
-    color: white;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* "Contact Us" button on the right */
+.contact-button .btn-contact {
+    background-color: #FFD700;
+    color: #00205B;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
+.contact-button .btn-contact:hover {
+    background-color: #FFC107;
 }
 
-.header-text {
-    text-align: left;
-}
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.header-text h1 {
-    font-size: 3em;
-    margin: 0;
-}
+    header nav ul {
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
 
-.header-text p {
-    font-size: 1.2em;
-    margin: 10px 0;
+    .contact-button {
+        margin-top: 10px;
+    }
 }
 
 /* Section Styling */
