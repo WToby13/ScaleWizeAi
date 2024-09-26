@@ -20,13 +20,6 @@ header {
     align-items: center;
 }
 
-/* Logo Styling */
-.logo {
-    max-width: 150px;
-    height: auto;
-    margin-right: 20px;
-}
-
 /* Logo on the left */
 header .logo img {
     width: 150px;
