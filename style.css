@@ -1,16 +1,22 @@
+/* Main colors*/
+:root {
+    --main-color: #D1DAEB; 
+    --secondary-color: #00205B;
+}   
+
 /* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #D1DAEB; /* Background color */
+    background-color: var(--main-color); /* Background color */
     color: #333;
     line-height: 1.6;
 }
 
 /* General header styling */
 header {
-    background-color: #00205B;
+    background-color: var(--maincolor);
     padding: 15px 30px;
 }
 
