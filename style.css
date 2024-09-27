@@ -1,7 +1,9 @@
 /* Main colors*/
 :root {
-    --main-color: #D1DAEB; 
-    --secondary-color: #00205B;
+    --main-color: #282828; 
+    --secondary-color: #3c3c3c;
+    --secondary-hover-color: #141414;
+    --text-white; #FFFFFFF;
 }   
 
 /* General Body Styling */
@@ -10,13 +12,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--main-color); /* Background color */
-    color: #333;
+    color: var(--secondary-color);
     line-height: 1.6;
 }
 
 /* General header styling */
 header {
-    background-color: var(--maincolor);
+    background-color: var(--main-color);
     padding: 15px 30px;
 }
 
@@ -58,7 +60,7 @@ header nav ul li a:hover {
 /* "Contact Us" button on the right */
 .contact-button .btn-contact {
     background-color: #ffffff;
-    color: #00205B;
+    color: var(--main-color);
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -128,7 +130,7 @@ header nav ul li a:hover {
 }
 
 #about-us {
-    background-color: #f4f4f4;
+    background-color: var(--secondary-color);
 }
 
 #about-us h2 {
@@ -143,7 +145,7 @@ header nav ul li a:hover {
 
 /* Founders Section */
 #founders {
-    background-color: #f0f0f0;
+    background-color: var(--main-color);
 }
 
 #founders h2 {
@@ -157,7 +159,7 @@ header nav ul li a:hover {
 }
 
 .founder {
-    background-color: white;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     padding: 20px;
     width: 30%;
@@ -186,7 +188,7 @@ header nav ul li a:hover {
 
 .founder a {
     text-decoration: none;
-    color: #00205B;
+    color: #FFFFFF;
     font-weight: bold;
 }
 
@@ -196,7 +198,7 @@ header nav ul li a:hover {
 
 /* CTA Section Styling */
 .cta-section {
-    background-color: #ffffff;
+    background-color: var(--main-color);
     padding: 40px;
     text-align: center; /* Center the text in CTA sections */
 }
@@ -212,7 +214,7 @@ header nav ul li a:hover {
 }
 
 .cta-button {
-    background-color: #00205B;
+    background-color: var(--secondary-color);
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -222,6 +224,6 @@ header nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background-color: #001A4A;
+    background-color: var(--secondary-hover-color);
     text-decoration: none;
 }
