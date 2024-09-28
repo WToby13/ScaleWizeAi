@@ -3,7 +3,7 @@
     --main-color: #282828; 
     --secondary-color: #3c3c3c;
     --secondary-hover-color: #141414;
-    --text-color: #FFFFFFF;
+    --text-color: #FFFFFF; /* Fixed typo here */
 }   
 
 /* General Body Styling */
@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--main-color); /* Background color */
-    color: var(--secondary-color);
+    color: var(--text-color); /* Changed from secondary to text color for better visibility */
     line-height: 1.6;
 }
 
@@ -48,7 +48,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
+    color: var(--text-color); /* Use text color for visibility */
     text-decoration: none;
     font-size: 18px;
 }
@@ -127,24 +127,24 @@ header nav ul li a:hover {
 .section {
     padding: 40px;
     text-align: center;
-    text-color: var(--text-color);
+    color: var(--text-color); /* Corrected from text-color to color */
 }
 
 #about-us {
     background-color: var(--secondary-color);
-    text-color: var(--text-color);
+    color: var(--text-color); /* Corrected property */
 }
 
 #about-us h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    text-color: var(--text-color);
+    color: var(--text-color); /* Corrected property */
 }
 
 #about-us p {
     font-size: 1.3em;
     margin-bottom: 20px;
-    text-color: var(--text-color);
+    color: var(--text-color); /* Corrected property */
 }
 
 /* Founders Section */
@@ -154,6 +154,7 @@ header nav ul li a:hover {
 
 #founders h2 {
     margin-bottom: 30px;
+    color: var(--text-color); /* Ensure it's readable */
 }
 
 .founders-container {
@@ -170,6 +171,7 @@ header nav ul li a:hover {
     margin: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    color: var(--text-color); /* Corrected text color */
 }
 
 .founder-headshot {
@@ -183,11 +185,13 @@ header nav ul li a:hover {
 .founder h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    color: var(--text-color); /* Ensure the heading is visible */
 }
 
 .founder p {
     font-size: 1.1em;
     margin-bottom: 10px;
+    color: var(--text-color); /* Ensure the paragraph text is visible */
 }
 
 .founder a {
@@ -205,19 +209,19 @@ header nav ul li a:hover {
     background-color: var(--main-color);
     padding: 40px;
     text-align: center; /* Center the text in CTA sections */
-    text-color: var(--text-color);
+    color: var(--text-color); /* Corrected from text-color to color */
 }
 
 .cta-section h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    text-color: var(--text-color);
+    color: var(--text-color); /* Corrected property */
 }
 
 .cta-section p {
     font-size: 1.2em;
     margin-bottom: 20px;
-    text-color: var(--text-color);
+    color: var(--text-color); /* Corrected property */
 }
 
 .cta-button {
