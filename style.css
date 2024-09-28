@@ -188,7 +188,7 @@ header nav ul li a:hover {
 /* Other Sections */
 
 #about-us {
-    background-color: var(--secondary-color);
+    background-color: var(--main-color);
     color: var(--text-color); /* Corrected property */
 }
 
@@ -263,7 +263,7 @@ header nav ul li a:hover {
 
 /* CTA Section Styling */
 .cta-section {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     padding: 40px;
     text-align: center; /* Center the text in CTA sections */
     color: var(--text-color); /* Corrected from text-color to color */
@@ -282,7 +282,7 @@ header nav ul li a:hover {
 }
 
 .cta-button {
-    background-color: var(--secondary-color);
+    background-color: var(--main-color);
     color: white;
     padding: 15px 30px;
     text-decoration: none;
