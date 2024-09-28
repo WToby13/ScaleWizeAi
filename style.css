@@ -208,11 +208,13 @@ header nav ul li a:hover {
 .cta-section h2 {
     font-size: 2em;
     margin-bottom: 20px;
+    text-color: var(--text-color);
 }
 
 .cta-section p {
     font-size: 1.2em;
     margin-bottom: 20px;
+    text-color: var(--text-color);
 }
 
 .cta-button {
