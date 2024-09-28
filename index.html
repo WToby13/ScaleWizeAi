@@ -5,19 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adeptable AI</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Use async function to load the header before rendering other parts of the body
+        async function loadHeader() {
+            try {
+                const response = await fetch("header.html");
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.text();
+                document.getElementById("header-placeholder").innerHTML = data;
+            } catch (error) {
+                console.error('There has been a problem with fetching the header:', error);
+            }
+        }
+
+        // Call the loadHeader function as soon as possible
+        document.addEventListener("DOMContentLoaded", () => {
+            loadHeader();
+        });
+    </script>
 </head>
 <body>
 
+    <!-- Placeholder for the Header -->
     <div id="header-placeholder"></div>
-
-    <script>
-        // Load the header dynamically from header.html
-        fetch("header.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header-placeholder").innerHTML = data;
-            });
-    </script>
 
     <!-- Header: Introduction -->
     <section class="hero">
