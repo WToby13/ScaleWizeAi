@@ -3,7 +3,7 @@
     --main-color: #282828; 
     --secondary-color: #3c3c3c;
     --secondary-hover-color: #141414;
-    --text-white; #FFFFFFF;
+    --text-color; #FFFFFFF;
 }   
 
 /* General Body Styling */
@@ -127,6 +127,7 @@ header nav ul li a:hover {
 .section {
     padding: 40px;
     text-align: center;
+    text-color: var(--text-color);
 }
 
 #about-us {
