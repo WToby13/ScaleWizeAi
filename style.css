@@ -3,7 +3,7 @@
     --main-color: #282828; 
     --secondary-color: #3c3c3c;
     --secondary-hover-color: #141414;
-    --text-color: #FFFFFF; /* Fixed typo here */
+    --text-color: #FFFFFF; 
 }   
 
 /* General Body Styling */
@@ -11,16 +11,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--main-color); /* Background color */
-    color: var(--text-color); /* Changed from secondary to text color for better visibility */
+    background-color: var(--main-color); 
+    color: var(--text-color); 
     line-height: 1.6;
 }
 
 /* General header styling */
 header {
     background-color: var(--main-color);
-    padding: 15px 30px;
-    height: 25vh; /* Set header height to a quarter of the viewport */
+    padding: 5px 30px;
     display: flex;
     align-items: center;
 }
@@ -38,6 +37,7 @@ header {
 /* Logo on the left */
 header .logo img {
     width: 50px;
+    height: auto;
 }
 
 /* Navigation links in the center */
@@ -126,7 +126,7 @@ header nav ul li a:hover {
 
     /* Reduce logo size a bit */
     .logo img {
-        width: 120px; /* Slightly smaller logo for very small screens */
+        width: 60px; /* Slightly smaller logo for very small screens */
     }
 }
 
