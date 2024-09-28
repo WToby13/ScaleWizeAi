@@ -20,13 +20,20 @@ body {
 header {
     background-color: var(--main-color);
     padding: 15px 30px;
+    height: 25vh; /* Set header height to a quarter of the viewport */
+    display: flex;
+    align-items: center;
 }
 
+/* Adjust the header container to fit within the set height */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%; /* Ensures the container takes the full width of the header */
+    height: 100%; /* Make sure the content adjusts to the full height of the header */
 }
+
 
 /* Logo on the left */
 header .logo img {
