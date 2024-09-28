@@ -172,11 +172,13 @@ header nav ul li a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
     z-index: 0; /* Places it behind the content */
     background: linear-gradient(135deg, #00205B, #0e1539, #1e2749); /* Creates a subtle color gradient */
     background-size: 300% 300%; /* Allows for animated movement */
+    Background-color: var(--main-color);
     animation: gradientAnimation 15s ease infinite; /* Gradient animation */
+    pointer-events: none;
 }
 
 @keyframes gradientAnimation {
