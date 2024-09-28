@@ -139,7 +139,9 @@
 
         // Animate particles
         function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'var(--main-color)'; // Use the main color from CSS variables
+            ctx.fillRect(0, 0, canvas.width, canvas.height); // Fill the canvas with the main color
+        
             for (let i = 0; i < particlesArray.length; i++) {
                 particlesArray[i].update();
                 particlesArray[i].draw();
