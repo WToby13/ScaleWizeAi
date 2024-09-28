@@ -132,16 +132,19 @@ header nav ul li a:hover {
 
 #about-us {
     background-color: var(--secondary-color);
+    text-color: var(--text-color);
 }
 
 #about-us h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    text-color: var(--text-color);
 }
 
 #about-us p {
     font-size: 1.3em;
     margin-bottom: 20px;
+    text-color: var(--text-color);
 }
 
 /* Founders Section */
