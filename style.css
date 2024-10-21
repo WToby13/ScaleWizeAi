@@ -2,7 +2,7 @@
 :root {
     --main-color: #282828;
     --secondary-color: #3c3c3c;
-    --accent-color: #00B4D8; /* New accent color for CTAs */
+    --accent-color: #00B4D8;
     --secondary-hover-color: #141414;
     --text-color: #FFFFFF;
 }
@@ -12,9 +12,46 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--main-color); 
+    background-color: var(--main-color);
     color: var(--text-color);
     line-height: 1.6;
+    position: relative; /* Make body relative to contain absolute elements */
+    overflow: hidden; /* Ensure the floating lights don't cause scrollbars */
+}
+
+/* Global light animation */
+.light {
+    position: absolute;
+    width: 0px;
+    opacity: .75;
+    background-color: white;
+    box-shadow: #e9f1f1 0px 0px 20px 2px;
+    opacity: 0;
+    top: 100vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    z-index: -1; /* Ensure it's behind all content */
+}
+
+.x1 { animation: floatUp 4s infinite linear; transform: scale(1.0); }
+.x2 { animation: floatUp 7s infinite linear; transform: scale(1.6); left: 15%; }
+.x3 { animation: floatUp 2.5s infinite linear; transform: scale(.5); left: -15%; }
+.x4 { animation: floatUp 4.5s infinite linear; transform: scale(1.2); left: -34%; }
+.x5 { animation: floatUp 8s infinite linear; transform: scale(2.2); left: -57%; }
+.x6 { animation: floatUp 3s infinite linear; transform: scale(.8); left: -81%; }
+.x7 { animation: floatUp 5.3s infinite linear; transform: scale(3.2); left: 37%; }
+.x8 { animation: floatUp 4.7s infinite linear; transform: scale(1.7); left: 62%; }
+.x9 { animation: floatUp 4.1s infinite linear; transform: scale(0.9); left: 85%; }
+
+/* Keyframe animations */
+@keyframes floatUp {
+    0% { top: 100vh; opacity: 0; }
+    25% { opacity: 1; }
+    50% { top: 0vh; opacity: .8; }
+    75% { opacity: 1; }
+    100% { top: -100vh; opacity: 0; }
 }
 
 /* General header styling */
@@ -26,7 +63,6 @@ header {
     align-items: center;
 }
 
-/* Adjust the header container to fit within the set height */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -35,12 +71,10 @@ header {
     height: 100%;
 }
 
-/* Logo on the left */
-header .logo img {
+.logo img {
     width: 60px;
 }
 
-/* Navigation links in the center */
 header nav ul {
     list-style-type: none;
     display: flex;
@@ -64,7 +98,6 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* "Contact Us" button on the right */
 .contact-button .btn-contact {
     background-color: #ffffff;
     color: var(--main-color);
@@ -80,12 +113,10 @@ header nav ul li a:hover {
 }
 
 /* Hero Section */
-/* Hero section with animated text */
 .hero {
     position: relative;
     background: radial-gradient(var(--secondary-color), var(--main-color));
     height: 100vh;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,74 +127,6 @@ header nav ul li a:hover {
     color: white;
     font-weight: 100;
     font-family: Arial, sans-serif;
-}
-
-/* Light animations */
-.light {
-    position: absolute;
-    width: 0px;
-    opacity: .75;
-    background-color: white;
-    box-shadow: #e9f1f1 0px 0px 20px 2px;
-    opacity: 0;
-    top: 100vh;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin: auto;
-}
-
-.x1 { animation: floatUp 4s infinite linear; transform: scale(1.0); }
-.x2 { animation: floatUp 7s infinite linear; transform: scale(1.6); left: 15%; }
-.x3 { animation: floatUp 2.5s infinite linear; transform: scale(.5); left: -15%; }
-.x4 { animation: floatUp 4.5s infinite linear; transform: scale(1.2); left: -34%; }
-.x5 { animation: floatUp 8s infinite linear; transform: scale(2.2); left: -57%; }
-.x6 { animation: floatUp 3s infinite linear; transform: scale(.8); left: -81%; }
-.x7 { animation: floatUp 5.3s infinite linear; transform: scale(3.2); left: 37%; }
-.x8 { animation: floatUp 4.7s infinite linear; transform: scale(1.7); left: 62%; }
-.x9 { animation: floatUp 4.1s infinite linear; transform: scale(0.9); left: 85%; }
-
-/* Keyframe animations */
-@keyframes floatUp {
-    0% { top: 100vh; opacity: 0; }
-    25% { opacity: 1; }
-    50% { top: 0vh; opacity: .8; }
-    75% { opacity: 1; }
-    100% { top: -100vh; opacity: 0; }
-}
-
-/* Text animation */
-.header {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2em;
-}
-
-#head1, #head2, #head3, #head4, #head5 {
-    opacity: 0;
-}
-
-#head1 { animation: fadeOut 3s ease-in; }
-#head2 { animation: fadeOut 3s ease-in 3.5s; }
-#head3 { animation: fadeOut 3s ease-in 7s; }
-#head4 { animation: fadeOut 3s ease-in 10.5s; }
-#head5 { animation: finalFade 3s ease-in 14s forwards; }
-
-@keyframes fadeOut {
-    0% { opacity: 0; }
-    30% { opacity: 1; }
-    80% { opacity: .9; }
-    100% { opacity: 0; }
-}
-
-@keyframes finalFade {
-    0% { opacity: 0; }
-    30% { opacity: 1; }
-    80% { opacity: .9; }
-    100% { opacity: 1; }
 }
 
 /* Button styling */
@@ -193,22 +156,20 @@ header nav ul li a:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-button:focus { outline: none; }
-
 /* Section Styling */
 .section {
     padding: 40px;
-    top: 50%;
     text-align: center;
     color: var(--text-color);
 }
 
 #about-us {
-    background-color: var(--secondary-color);
+    background: transparent; /* Let light animation be visible */
+    z-index: 1; /* Content appears above the lights */
 }
 
 #about-us h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
 }
 
@@ -219,15 +180,14 @@ button:focus { outline: none; }
 
 /* CTA Section Styling */
 .cta-section {
-    background-color: var(--main-color);
-    padding: 40px;
+    background: var(--accent-color);
+    padding: 50px;
     text-align: center;
-    color: var(--text-color);
 }
 
 .cta-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: white;
 }
 
 .cta-section p {
@@ -236,134 +196,64 @@ button:focus { outline: none; }
 }
 
 .cta-button {
-    background-color: var(--accent-color);
-    color: white;
+    background: white;
+    color: var(--accent-color);
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.2em;
-    font-weight: bold;
-    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #0077b6;
-    transform: scale(1.05);
+    background: #f4f4f4;
+    color: var(--accent-color);
 }
 
 /* Founders Section */
 #founders {
-    background-color: var(--main-color);
+    background: var(--secondary-color);
+    padding: 50px;
+    text-align: center;
 }
 
 #founders h2 {
-    margin-bottom: 30px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 .founders-container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 .founder {
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-    padding: 20px;
-    width: 30%;
-    margin: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.founder:hover {
-    transform: translateY(-10px);
+    color: white;
 }
 
 .founder-headshot {
-    border-radius: 50%;
     width: 150px;
-    height: 150px;
-    object-fit: cover;
+    border-radius: 50%;
     margin-bottom: 15px;
 }
 
 .founder h3 {
     font-size: 1.5em;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .founder p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin-bottom: 10px;
 }
 
 .founder a {
     text-decoration: none;
-    color: #FFFFFF;
-    font-weight: bold;
+    color: var(--accent-color);
 }
 
 .founder a:hover {
     text-decoration: underline;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo img {
-        margin-bottom: 10px;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-    header nav ul li {
-        margin: 8px 0;
-    }
-
-    .contact-button .btn-contact {
-        padding: 10px 20px;
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .founders-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .founder {
-        width: 80%;
-    }
-}
-
-/* Even smaller screen adjustments (e.g., phones under 500px wide) */
-@media (max-width: 500px) {
-    header nav ul li a {
-        font-size: 14px;
-    }
-
-    .contact-button .btn-contact {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    .logo img {
-        width: 30px;
-    }
-
-    .founder-headshot {
-        width: 120px;
-        height: 120px;
-    }
-}
