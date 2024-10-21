@@ -1,19 +1,19 @@
-/* Main colors*/
+/* Main colors */
 :root {
-    --main-color: #282828; 
+    --main-color: #282828;
     --secondary-color: #3c3c3c;
-    --accent-color: #00B4D8; /*new accent color */
+    --accent-color: #00B4D8; /* New accent color for CTAs */
     --secondary-hover-color: #141414;
-    --text-color: #FFFFFF; /* Fixed typo here */
-}   
+    --text-color: #FFFFFF;
+}
 
 /* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--main-color); /* Background color */
-    color: var(--text-color); /* Changed from secondary to text color for better visibility */
+    background-color: var(--main-color); 
+    color: var(--text-color);
     line-height: 1.6;
 }
 
@@ -21,7 +21,7 @@ body {
 header {
     background-color: var(--main-color);
     padding: 15px 30px;
-    height: 25vh; /* Set header height to a quarter of the viewport */
+    height: 25vh;
     display: flex;
     align-items: center;
 }
@@ -31,10 +31,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Ensures the container takes the full width of the header */
-    height: 100%; /* Make sure the content adjusts to the full height of the header */
+    width: 100%; 
+    height: 100%;
 }
-
 
 /* Logo on the left */
 header .logo img {
@@ -56,13 +55,28 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: var(--text-color); /* Use text color for visibility */
+    color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
 }
 
 header nav ul li a:hover {
     text-decoration: underline;
+}
+
+/* "Contact Us" button on the right */
+.contact-button .btn-contact {
+    background-color: #ffffff;
+    color: var(--main-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contact-button .btn-contact:hover {
+    background-color: #f4f4f4;
 }
 
 /* Hero Section */
@@ -85,95 +99,59 @@ header nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-
-/* "Contact Us" button on the right */
-.contact-button .btn-contact {
-    background-color: #ffffff;
-    color: var(--main-color);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.contact-button .btn-contact:hover {
-    background-color: #f4f4f4;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    /* Adjust header layout for smaller screens */
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Center the logo, nav, and contact button */
-    .logo img {
-        margin-bottom: 15px; /* Adds some spacing below the logo */
-    }
-
-    /* Stack nav items vertically on mobile */
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 15px;
-    }
-
-    header nav ul li {
-        margin: 10px 0; /* Space between each link */
-    }
-
-    /* Make the contact button full-width for mobile */
-    .contact-button .btn-contact {
-        padding: 12px 24px;
-        width: 100%; /* Button takes up the entire width on mobile */
-        text-align: center; /* Ensure the button text is centered */
-        margin-top: 15px; /* Adds space between button and navigation */
-    }
-}
-
-/* Even smaller screen adjustments (e.g., phones under 500px wide) */
-@media (max-width: 500px) {
-    /* Reduce font size for navigation and button */
-    header nav ul li a {
-        font-size: 16px;
-    }
-
-    .contact-button .btn-contact {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    /* Reduce logo size a bit */
-    .logo img {
-        width: 120px; /* Slightly smaller logo for very small screens */
-    }
-}
-
 /* Section Styling */
 .section {
     padding: 40px;
     text-align: center;
-    color: var(--text-color); /* Corrected from text-color to color */
+    color: var(--text-color);
 }
 
 #about-us {
     background-color: var(--secondary-color);
-    color: var(--text-color); /* Corrected property */
 }
 
 #about-us h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: var(--text-color); /* Corrected property */
 }
 
 #about-us p {
     font-size: 1.3em;
     margin-bottom: 20px;
-    color: var(--text-color); /* Corrected property */
+}
+
+/* CTA Section Styling */
+.cta-section {
+    background-color: var(--main-color);
+    padding: 40px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.cta-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0077b6;
+    transform: scale(1.05);
 }
 
 /* Founders Section */
@@ -183,7 +161,6 @@ header nav ul li a:hover {
 
 #founders h2 {
     margin-bottom: 30px;
-    color: var(--text-color); /* Ensure it's readable */
 }
 
 .founders-container {
@@ -200,11 +177,15 @@ header nav ul li a:hover {
     margin: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: var(--text-color); /* Corrected text color */
+    transition: transform 0.3s ease;
+}
+
+.founder:hover {
+    transform: translateY(-10px);
 }
 
 .founder-headshot {
-    border-radius: 50%; /* Circular headshot */
+    border-radius: 50%;
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -214,13 +195,11 @@ header nav ul li a:hover {
 .founder h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: var(--text-color); /* Ensure the heading is visible */
 }
 
 .founder p {
     font-size: 1.1em;
     margin-bottom: 10px;
-    color: var(--text-color); /* Ensure the paragraph text is visible */
 }
 
 .founder a {
@@ -233,37 +212,61 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* CTA Section Styling */
-.cta-section {
-    background-color: var(--main-color);
-    padding: 40px;
-    text-align: center; /* Center the text in CTA sections */
-    color: var(--text-color); /* Corrected from text-color to color */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        margin-bottom: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .contact-button .btn-contact {
+        padding: 12px 24px;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .founders-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .founder {
+        width: 80%;
+    }
 }
 
-.cta-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: var(--text-color); /* Corrected property */
-}
+/* Even smaller screen adjustments (e.g., phones under 500px wide) */
+@media (max-width: 500px) {
+    header nav ul li a {
+        font-size: 16px;
+    }
 
-.cta-section p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: var(--text-color); /* Corrected property */
-}
+    .contact-button .btn-contact {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
 
-.cta-button {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    font-weight: bold;
-}
+    .logo img {
+        width: 120px;
+    }
 
-.cta-button:hover {
-    background-color: var(--secondary-hover-color);
-    text-decoration: none;
+    .founder-headshot {
+        width: 120px;
+        height: 120px;
+    }
 }
