@@ -20,8 +20,8 @@ body {
 /* General header styling */
 header {
     background-color: var(--main-color);
-    padding: 15px 30px;
-    height: 25vh;
+    padding: 10px 20px;
+    height: 60px;
     display: flex;
     align-items: center;
 }
@@ -37,7 +37,7 @@ header {
 
 /* Logo on the left */
 header .logo img {
-    width: 50px;
+    width: 60px;
 }
 
 /* Navigation links in the center */
@@ -68,7 +68,7 @@ header nav ul li a:hover {
 .contact-button .btn-contact {
     background-color: #ffffff;
     color: var(--main-color);
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -220,24 +220,24 @@ header nav ul li a:hover {
     }
 
     .logo img {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     header nav ul {
         flex-direction: column;
         align-items: center;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     header nav ul li {
-        margin: 10px 0;
+        margin: 8px 0;
     }
 
     .contact-button .btn-contact {
-        padding: 12px 24px;
+        padding: 10px 20px;
         width: 100%;
         text-align: center;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     .founders-container {
@@ -253,16 +253,16 @@ header nav ul li a:hover {
 /* Even smaller screen adjustments (e.g., phones under 500px wide) */
 @media (max-width: 500px) {
     header nav ul li a {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .contact-button .btn-contact {
-        font-size: 16px;
-        padding: 10px 20px;
+        font-size: 14px;
+        padding: 8px 16px;
     }
 
     .logo img {
-        width: 120px;
+        width: 30px;
     }
 
     .founder-headshot {
