@@ -3,24 +3,40 @@
     --main-color: #282828; 
     --secondary-color: #3c3c3c;
     --secondary-hover-color: #141414;
-    --text-color: #FFFFFF; /* Fixed typo here */
-}   
+    --text-color: #FFFFFF;
+}
 
 /* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--main-color); /* Background color */
-    color: var(--text-color); /* Changed from secondary to text color for better visibility */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: var(--text-color);
     line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Keyframes for background animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* General header styling */
 header {
     background-color: var(--main-color);
     padding: 10px 20px;
-    height: 10vh; /* Set header height to a quarter of the viewport */
+    height: 10vh;
     display: flex;
     align-items: center;
 }
@@ -30,10 +46,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Ensures the container takes the full width of the header */
-    height: 100%; /* Make sure the content adjusts to the full height of the header */
+    width: 100%;
+    height: 100%;
 }
-
 
 /* Logo on the left */
 header .logo img {
@@ -55,7 +70,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: var(--text-color); /* Use text color for visibility */
+    color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
 }
@@ -81,18 +96,15 @@ header nav ul li a:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    /* Adjust header layout for smaller screens */
     .header-container {
         flex-direction: column;
         align-items: center;
     }
 
-    /* Center the logo, nav, and contact button */
     .logo img {
-        margin-bottom: 15px; /* Adds some spacing below the logo */
+        margin-bottom: 15px;
     }
 
-    /* Stack nav items vertically on mobile */
     header nav ul {
         flex-direction: column;
         align-items: center;
@@ -100,21 +112,18 @@ header nav ul li a:hover {
     }
 
     header nav ul li {
-        margin: 10px 0; /* Space between each link */
+        margin: 10px 0;
     }
 
-    /* Make the contact button full-width for mobile */
     .contact-button .btn-contact {
         padding: 12px 24px;
-        width: 100%; /* Button takes up the entire width on mobile */
-        text-align: center; /* Ensure the button text is centered */
-        margin-top: 15px; /* Adds space between button and navigation */
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
     }
 }
 
-/* Even smaller screen adjustments (e.g., phones under 500px wide) */
 @media (max-width: 500px) {
-    /* Reduce font size for navigation and button */
     header nav ul li a {
         font-size: 16px;
     }
@@ -124,9 +133,8 @@ header nav ul li a:hover {
         padding: 10px 20px;
     }
 
-    /* Reduce logo size a bit */
     .logo img {
-        width: 120px; /* Slightly smaller logo for very small screens */
+        width: 120px;
     }
 }
 
@@ -134,34 +142,22 @@ header nav ul li a:hover {
 .section {
     padding: 40px;
     text-align: center;
-    color: var(--text-color); /* Corrected from text-color to color */
+    color: var(--text-color);
+    backdrop-filter: blur(5px); /* Added to enhance readability against animated background */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
 }
 
 #about-us {
-    background-color: var(--secondary-color);
-    color: var(--text-color); /* Corrected property */
+    background-color: rgba(60, 60, 60, 0.5); /* Maintain semi-transparency */
 }
 
-#about-us h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: var(--text-color); /* Corrected property */
-}
-
-#about-us p {
-    font-size: 1.3em;
-    margin-bottom: 20px;
-    color: var(--text-color); /* Corrected property */
+#about-us h2, #about-us p {
+    color: var(--text-color);
 }
 
 /* Founders Section */
 #founders {
-    background-color: var(--main-color);
-}
-
-#founders h2 {
-    margin-bottom: 30px;
-    color: var(--text-color); /* Ensure it's readable */
+    background-color: rgba(40, 40, 40, 0.6);
 }
 
 .founders-container {
@@ -171,64 +167,28 @@ header nav ul li a:hover {
 }
 
 .founder {
-    background-color: var(--secondary-color);
+    background-color: rgba(60, 60, 60, 0.7);
     border-radius: 10px;
     padding: 20px;
     width: 30%;
     margin: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: var(--text-color); /* Corrected text color */
 }
 
 .founder-headshot {
-    border-radius: 50%; /* Circular headshot */
+    border-radius: 50%;
     width: 150px;
     height: 150px;
     object-fit: cover;
     margin-bottom: 15px;
 }
 
-.founder h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: var(--text-color); /* Ensure the heading is visible */
-}
-
-.founder p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    color: var(--text-color); /* Ensure the paragraph text is visible */
-}
-
-.founder a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-weight: bold;
-}
-
-.founder a:hover {
-    text-decoration: underline;
-}
-
 /* CTA Section Styling */
 .cta-section {
-    background-color: var(--main-color);
+    background-color: rgba(40, 40, 40, 0.6);
     padding: 40px;
-    text-align: center; /* Center the text in CTA sections */
-    color: var(--text-color); /* Corrected from text-color to color */
-}
-
-.cta-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: var(--text-color); /* Corrected property */
-}
-
-.cta-section p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: var(--text-color); /* Corrected property */
+    text-align: center;
 }
 
 .cta-button {
@@ -245,3 +205,4 @@ header nav ul li a:hover {
     background-color: var(--secondary-hover-color);
     text-decoration: none;
 }
+
