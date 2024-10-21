@@ -3,105 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adeptable AI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Website with Global Animated Background</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        async function loadHeader() {
-            try {
-                const response = await fetch("header.html");
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.text();
-                document.getElementById("header-placeholder").innerHTML = data;
-            } catch (error) {
-                console.error('There has been a problem with fetching the header:', error);
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            loadHeader();
-        });
-    </script>
 </head>
 <body>
+    <!-- Light elements for global animation -->
+    <div class="light x1"></div>
+    <div class="light x2"></div>
+    <div class="light x3"></div>
+    <div class="light x4"></div>
+    <div class="light x5"></div>
+    <div class="light x6"></div>
+    <div class="light x7"></div>
+    <div class="light x8"></div>
+    <div class="light x9"></div>
 
-    <div id="header-placeholder"></div>
+    <!-- Header section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-button">
+                <a href="#" class="btn-contact">Contact Us</a>
+            </div>
+        </div>
+    </header>
 
+    <!-- Hero section -->
     <section class="hero">
-        <!-- Animated text and background -->
         <div class="hero-content">
-            <p id="head1" class="header">Adept</p>
-            <p id="head2" class="header">Adaptable</p>
-            <p id="head3" class="header">Applicable</p>
-            <p id="head4" class="header">Ai Solutions</p>
-            <p id="head5" class="header">Adeptable Ai</p>
+            <h1>Welcome to Our Website</h1>
+            <p>Your tagline goes here</p>
+            <button class="hero-button">Learn More</button>
         </div>
-        
-        <div id="about-us" class="section cta-section">
-            <p>Harness the full potential and transformative power of AI. We guide businesses through the complexities of emerging, innovative technologies. Driving productivity, scaling through efficiency, and empowering organizations to reach beyond their limits.</p>
-            <h1></h1>
-            <h2>Stay Updated with AI Insights</h2>
-            <p>Sign up for our newsletter to receive the latest AI strategies and tools directly in your inbox.</p>
-            <a href="https://dbktj5n8fxw.typeform.com/to/yd7x5oLK" target="_blank" class="cta-button">Sign Up for Newsletter</a>
-        </div>
-        
-        <!-- Light effects -->
-        <div class='light x1'></div>
-        <div class='light x2'></div>
-        <div class='light x3'></div>
-        <div class='light x4'></div>
-        <div class='light x5'></div>
-        <div class='light x6'></div>
-        <div class='light x7'></div>
-        <div class='light x8'></div>
-        <div class='light x9'></div>
     </section>
-        
-    <section id="about-us" class="section cta-section">
+
+    <!-- About Us section -->
+    <section id="about-us">
         <h2>About Us</h2>
-        <p>Harness the full potential and transformative power of AI. We guide businesses through the complexities of emerging, innovative technologies. Driving productivity, scaling through efficiency, and empowering organizations to reach beyond their limits.</p>
+        <p>We are a team of passionate developers and designers committed to creating the best digital experiences for our clients.</p>
     </section>
 
-    <section id="newsletter" class="section cta-section">
-        <h2>Stay Updated with AI Insights</h2>
-        <p>Sign up for our newsletter to receive the latest AI strategies and tools directly in your inbox.</p>
-        <a href="https://dbktj5n8fxw.typeform.com/to/yd7x5oLK" target="_blank" class="cta-button">Sign Up for Newsletter</a>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Start?</h2>
+        <p>Contact us today to start your project!</p>
+        <a href="#" class="cta-button">Get Started</a>
     </section>
 
-    <section id="book-call" class="section cta-section">
-        <h2>Book a Sales Call</h2>
-        <p>Want to learn how we can help your business with AI? Schedule a call with us today.</p>
-        <a href="https://calendly.com/your-calendly-link" target="_blank" class="cta-button">Book a Call</a>
-    </section>
-
-    <section id="founders" class="section">
-        <h2>Meet the Founders</h2>
+    <!-- Founders Section -->
+    <section id="founders">
+        <h2>Meet Our Founders</h2>
         <div class="founders-container">
             <div class="founder">
-                <img src="Fabio.jpeg" alt="Fabio Galante" class="founder-headshot">
-                <h3>Fabio Galante</h3>
-                <p>Expert in AI Strategy</p>
-                <a href="https://www.linkedin.com/in/fabiogalante/" target="_blank">Connect on LinkedIn</a>
+                <img src="founder1.jpg" alt="Founder 1" class="founder-headshot">
+                <h3>Founder 1</h3>
+                <p>Lead Developer</p>
+                <a href="#">LinkedIn</a>
             </div>
             <div class="founder">
-                <img src="Toby.jpeg" alt="W Toby Keating" class="founder-headshot">
-                <h3>W Toby Keating</h3>
-                <p>Expert in AI Implementation</p>
-                <a href="https://www.linkedin.com/in/william-toby-keating-3b2b73152/" target="_blank">Connect on LinkedIn</a>
+                <img src="founder2.jpg" alt="Founder 2" class="founder-headshot">
+                <h3>Founder 2</h3>
+                <p>Creative Director</p>
+                <a href="#">LinkedIn</a>
             </div>
             <div class="founder">
-                <img src="Gustavo.jpeg" alt="Gustavo Velarde" class="founder-headshot">
-                <h3>Gustavo Velarde</h3>
-                <p>Expert in Data Analytics</p>
-                <a href="https://www.linkedin.com/in/gustavo-velarde/" target="_blank">Connect on LinkedIn</a>
+                <img src="founder3.jpg" alt="Founder 3" class="founder-headshot">
+                <h3>Founder 3</h3>
+                <p>Project Manager</p>
+                <a href="#">LinkedIn</a>
             </div>
         </div>
     </section>
-
-</body>
-</html>
-
 </body>
 </html>
