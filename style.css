@@ -141,9 +141,10 @@ header nav ul li a:hover {
 }
 
 /* Hero Section Styling */
+/* Hero Section Styling */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 100vh; /* Initially full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,6 +152,9 @@ header nav ul li a:hover {
     color: var(--text-color);
     text-align: center;
     padding: 20px;
+    opacity: 0; /* Start invisible */
+    animation: fadeInShrink 5s ease-out forwards; /* Full sequence: fade in and shrink */
+    overflow: hidden; /* Ensure clean transitions */
 }
 
 .hero-content {
@@ -158,47 +162,38 @@ header nav ul li a:hover {
     max-width: 800px;
 }
 
-/* Headline animation - subtle fade-in and zoom */
+/* Headline animation */
 .animated-text {
     font-size: 4rem;
     font-weight: bold;
     margin: 0;
     color: var(--secondary-color); /* Use secondary color for emphasis */
-    animation: fadeZoomIn 2s ease-out forwards; /* Subtle animation */
 }
 
-/* Subtitle animation - simple fade-in */
+/* Subtitle animation */
 .hero-subtitle {
     font-size: 1.5rem;
     margin: 20px 0;
-    color: var(--text-color); /* Use text color for the subtitle */
-    opacity: 0;
-    animation: fadeIn 2s 1.5s forwards; /* Delayed fade-in */
+    color: var(--text-color);
 }
 
-/* Fade-in and zoom effect for headline */
-@keyframes fadeZoomIn {
+/* Key animation sequence: fade in and then shrink */
+@keyframes fadeInShrink {
     0% {
         opacity: 0;
-        transform: scale(0.8);
+        height: 100vh; /* Start at full height */
+    }
+    50% {
+        opacity: 1;
+        height: 100vh; /* Maintain height during fade-in */
     }
     100% {
         opacity: 1;
-        transform: scale(1);
+        height: 50vh; /* Shrink to 50% of viewport height */
     }
 }
 
-/* Simple fade-in for subtitle */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Background Enhancements - maintaining the background animation */
+/* Background Enhancements - maintain previous background animation */
 .hero::before {
     content: "";
     position: absolute;
@@ -208,7 +203,7 @@ header nav ul li a:hover {
     height: 100%;
     background: linear-gradient(-45deg, rgba(60, 60, 60, 0.7), rgba(20, 20, 20, 0.7));
     z-index: 1;
-    animation: gradientShift 10s ease infinite; /* Maintained smooth background animation */
+    animation: gradientShift 10s ease infinite;
 }
 
 /* Subtle background gradient animation */
@@ -223,6 +218,12 @@ header nav ul li a:hover {
         background-position: 0% 50%;
     }
 }
+
+/* Smooth height adjustment for other sections when hero shrinks */
+section {
+    transition: margin-top 1s ease-in-out;
+}
+
 
 
 /* Section Styling */
