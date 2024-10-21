@@ -2,6 +2,7 @@
 :root {
     --main-color: #282828; 
     --secondary-color: #3c3c3c;
+    --accent-color: #00B4D8; /*new accent color */
     --secondary-hover-color: #141414;
     --text-color: #FFFFFF; /* Fixed typo here */
 }   
@@ -63,6 +64,27 @@ header nav ul li a {
 header nav ul li a:hover {
     text-decoration: underline;
 }
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(to right, rgba(40, 40, 40, 0.9), rgba(40, 40, 40, 0.7));
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
 
 /* "Contact Us" button on the right */
 .contact-button .btn-contact {
