@@ -146,11 +146,11 @@ header nav ul li a:hover {
     opacity: 0;
 }
 
-#head1 { animation: fadeOut 5s ease-in; }
-#head2 { animation: fadeOut 5s ease-in 6s; }
-#head3 { animation: fadeOut 5s ease-in 12s; }
-#head4 { animation: fadeOut 5s ease-in 17s; }
-#head5 { animation: finalFade 5s ease-in 22s forwards; }
+#head1 { animation: fadeOut 3s ease-in; }
+#head2 { animation: fadeOut 3s ease-in 3.5s; }
+#head3 { animation: fadeOut 3s ease-in 7s; }
+#head4 { animation: fadeOut 3s ease-in 10.5s; }
+#head5 { animation: finalFade 3s ease-in 14s forwards; }
 
 @keyframes fadeOut {
     0% { opacity: 0; }
