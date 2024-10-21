@@ -43,14 +43,102 @@ header {
     align-items: center;
 }
 
-/* Adjust the header container to fit within the set height */
+/* Header Adjustments */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100%;
+    position: relative;
 }
+
+/* Hide the burger menu on large screens */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+}
+
+/* The three lines of the burger */
+.burger-bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--text-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hide the nav and contact button by default on small screens */
+.nav-menu, .contact-button {
+    display: flex;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: absolute;
+        top: 100%; /* Drop down below the header */
+        left: 0;
+        width: 100%;
+        height: 0; /* Hidden initially */
+        overflow: hidden;
+        flex-direction: column;
+        background-color: var(--main-color); /* Match header background */
+        transition: height 0.3s ease;
+        z-index: 1;
+    }
+
+    /* Hidden by default */
+    .nav-menu ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-menu ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .contact-button {
+        display: none; /* Hidden on mobile initially */
+    }
+
+    /* Show the burger menu on mobile */
+    .burger-menu {
+        display: flex;
+    }
+
+    /* Open the menu when active */
+    .nav-menu.active {
+        height: 200px; /* Adjust based on the height needed to show the links */
+    }
+
+    .contact-button.active {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* When burger is active, change its bars into an X */
+.burger-menu.open .burger-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.open .burger-bar:nth-child(2) {
+    opacity: 0; /* Hide middle bar */
+}
+
+.burger-menu.open .burger-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 
 /* Logo on the left */
 header .logo img {
