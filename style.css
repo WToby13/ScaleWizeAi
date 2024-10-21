@@ -198,6 +198,7 @@ button:focus { outline: none; }
 /* Section Styling */
 .section {
     padding: 40px;
+    top: 50%;
     text-align: center;
     color: var(--text-color);
 }
