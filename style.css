@@ -17,6 +17,12 @@ body {
 }
 
 /* General header styling */
+#header-placeholder {
+    height: 0;
+    position: relative; /* Ensure it doesn’t interfere with other elements */
+}
+
+
 header {
     background-color: var(--main-color);
     padding: 5px 30px;
