@@ -140,6 +140,91 @@ header nav ul li a:hover {
     }
 }
 
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(40, 40, 40, 0.9); /* Overlay for enhanced text visibility */
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    z-index: 2; /* Ensures text content is above the animated background */
+    max-width: 800px;
+}
+
+/* Headline animation - subtle fade-in and zoom */
+.animated-text {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    color: var(--secondary-color); /* Use secondary color for emphasis */
+    animation: fadeZoomIn 2s ease-out forwards; /* Subtle animation */
+}
+
+/* Subtitle animation - simple fade-in */
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: var(--text-color); /* Use text color for the subtitle */
+    opacity: 0;
+    animation: fadeIn 2s 1.5s forwards; /* Delayed fade-in */
+}
+
+/* Fade-in and zoom effect for headline */
+@keyframes fadeZoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Simple fade-in for subtitle */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Background Enhancements - maintaining the background animation */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, rgba(60, 60, 60, 0.7), rgba(20, 20, 20, 0.7));
+    z-index: 1;
+    animation: gradientShift 10s ease infinite; /* Maintained smooth background animation */
+}
+
+/* Subtle background gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 /* Section Styling */
 .section {
     padding: 40px;
