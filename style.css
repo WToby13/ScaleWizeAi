@@ -4,6 +4,8 @@
     --secondary-color: #3c3c3c;
     --secondary-hover-color: #141414;
     --text-color: #FFFFFF;
+    --accent-color-1: #494949; /* New color to replace pink */
+    --accent-color-2: #5f5f5f; /* New color to replace blue */
 }
 
 /* General Body Styling */
@@ -11,7 +13,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(-45deg, var(--main-color), var(--secondary-color));
+    background: linear-gradient(-45deg, var(--main-color), var(--accent-color-1), var(--secondary-color), var(--accent-color-2));
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     color: var(--text-color);
