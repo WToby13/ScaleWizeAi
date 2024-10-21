@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adeptable AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script>
-        // Use async function to load the header before rendering other parts of the body
         async function loadHeader() {
             try {
                 const response = await fetch("header.html");
@@ -20,7 +20,6 @@
             }
         }
 
-        // Call the loadHeader function as soon as possible
         document.addEventListener("DOMContentLoaded", () => {
             loadHeader();
         });
@@ -28,36 +27,30 @@
 </head>
 <body>
 
-    <!-- Placeholder for the Header -->
     <div id="header-placeholder"></div>
 
-    <!-- Header: Introduction -->
     <section class="hero">
         <h1>Adeptable</h1>
-        <p>Adept, adaptable, and applicable Ai Solutions</p>
+        <p>Adept, adaptable, and applicable AI Solutions</p>
     </section>
         
-    <!-- About Us Section -->
     <section id="about-us" class="section cta-section">
         <h2>About Us</h2>
-        <p>Harness the full potential and transformative power of Ai. We guide businesses through the complexities of emerging, innovative technologies. Driving productivity, scaling through efficiency, and empowering organizations to reach beyond their limits.</p>
+        <p>Harness the full potential and transformative power of AI. We guide businesses through the complexities of emerging, innovative technologies. Driving productivity, scaling through efficiency, and empowering organizations to reach beyond their limits.</p>
     </section>
 
-    <!-- Newsletter Signup Section -->
     <section id="newsletter" class="section cta-section">
         <h2>Stay Updated with AI Insights</h2>
         <p>Sign up for our newsletter to receive the latest AI strategies and tools directly in your inbox.</p>
         <a href="https://dbktj5n8fxw.typeform.com/to/yd7x5oLK" target="_blank" class="cta-button">Sign Up for Newsletter</a>
     </section>
 
-    <!-- Sales Call Booking Section -->
     <section id="book-call" class="section cta-section">
         <h2>Book a Sales Call</h2>
         <p>Want to learn how we can help your business with AI? Schedule a call with us today.</p>
         <a href="https://calendly.com/your-calendly-link" target="_blank" class="cta-button">Book a Call</a>
     </section>
 
-    <!-- Founders Section -->
     <section id="founders" class="section">
         <h2>Meet the Founders</h2>
         <div class="founders-container">
@@ -81,6 +74,9 @@
             </div>
         </div>
     </section>
+
+</body>
+</html>
 
 </body>
 </html>
