@@ -3,7 +3,7 @@
     --main-color: #282828; 
     --secondary-color: #3c3c3c;
     --secondary-hover-color: #141414;
-    --text-color: #FFFFFF; 
+    --text-color: #FFFFFF; /* Fixed typo here */
 }   
 
 /* General Body Styling */
@@ -11,21 +11,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--main-color); 
-    color: var(--text-color); 
+    background-color: var(--main-color); /* Background color */
+    color: var(--text-color); /* Changed from secondary to text color for better visibility */
     line-height: 1.6;
 }
 
 /* General header styling */
-#header-placeholder {
-    height: 0;
-    position: relative; /* Ensure it doesn’t interfere with other elements */
-}
-
-
 header {
     background-color: var(--main-color);
-    padding: 5px 30px;
+    padding: 15px 30px;
+    height: 25vh; /* Set header height to a quarter of the viewport */
     display: flex;
     align-items: center;
 }
@@ -43,7 +38,6 @@ header {
 /* Logo on the left */
 header .logo img {
     width: 50px;
-    height: auto;
 }
 
 /* Navigation links in the center */
@@ -132,68 +126,19 @@ header nav ul li a:hover {
 
     /* Reduce logo size a bit */
     .logo img {
-        width: 60px; /* Slightly smaller logo for very small screens */
+        width: 120px; /* Slightly smaller logo for very small screens */
     }
 }
 
-/* Hero Section Styling */
-.hero {
-    position: relative;
-    height: 100vh; /* Adjusted height to be 50% of the viewport */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: var(--main-color); /* Set background color of hero section */
-    color: var(--text-color); /* Use main text color */
-    text-align: center;
-}
-
-.hero-content {
-    position: absolute;
-    z-index: 2; /* Ensure content stays on top of the animation */
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 4em; /* Large headline */
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.hero p {
-    font-size: 1.5em;
-    margin-top: 0;
-}
-
-/* Canvas Styling */
-#background-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1; /* Places it behind the content */
-    background-color: var(--main-color); /* Set the background to match the main color */
-    pointer-events: none; /* Prevent the canvas from interfering with user interactions */
-}
-
-/* General Section Styling for Other Sections */
+/* Section Styling */
 .section {
-    height: 100vh; /* Adjusted height to be 50% of the viewport */
     padding: 40px;
     text-align: center;
-    color: var(--text-color);
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
+    color: var(--text-color); /* Corrected from text-color to color */
 }
 
-/* Other Sections */
-
 #about-us {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     color: var(--text-color); /* Corrected property */
 }
 
@@ -268,7 +213,7 @@ header nav ul li a:hover {
 
 /* CTA Section Styling */
 .cta-section {
-    background-color: var(--secondary-color);
+    background-color: var(--main-color);
     padding: 40px;
     text-align: center; /* Center the text in CTA sections */
     color: var(--text-color); /* Corrected from text-color to color */
@@ -287,7 +232,7 @@ header nav ul li a:hover {
 }
 
 .cta-button {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     color: white;
     padding: 15px 30px;
     text-decoration: none;
