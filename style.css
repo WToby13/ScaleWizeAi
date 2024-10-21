@@ -133,7 +133,7 @@ header nav ul li a:hover {
 /* Hero Section Styling */
 .hero {
     position: relative;
-    height: 50vh; /* Adjusted height to be 50% of the viewport */
+    height: 100vh; /* Adjusted height to be 50% of the viewport */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,7 +175,7 @@ header nav ul li a:hover {
 
 /* General Section Styling for Other Sections */
 .section {
-    height: 50vh; /* Adjusted height to be 50% of the viewport */
+    height: 100vh; /* Adjusted height to be 50% of the viewport */
     padding: 40px;
     text-align: center;
     color: var(--text-color);
