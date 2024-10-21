@@ -83,7 +83,7 @@ header nav ul li a:hover {
 /* Hero section with animated text */
 .hero {
     position: relative;
-    background: radial-gradient(var(--accent-color), var(--main-color));
+    background: radial-gradient(var(--secondary-color), var(--main-color));
     height: 100vh;
     overflow: hidden;
     display: flex;
@@ -181,7 +181,7 @@ header nav ul li a:hover {
     left: 50%;
     transform: translateX(-50%);
     transition: .3s;
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 .hero-button:hover {
