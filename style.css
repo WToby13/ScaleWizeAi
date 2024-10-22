@@ -1,11 +1,11 @@
 /* Main colors */
 :root {
-    --main-color: #282828; 
-    --secondary-color: #3c3c3c;
+    --main-color: #eef3f9; 
+    --secondary-color: #b3cde4;
     --secondary-hover-color: #141414;
-    --text-color: #FFFFFF;
-    --accent-color-1: #494949;
-    --accent-color-2: #003c60;
+    --text-color: #001b2e;
+    --accent-color-1: #537692;
+    --accent-color-2: #1d3f58;
 }
 
 /* General Body Styling */
