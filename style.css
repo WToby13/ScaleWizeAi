@@ -1,11 +1,11 @@
-/* Main colors*/
+/* Main colors */
 :root {
     --main-color: #282828; 
     --secondary-color: #3c3c3c;
     --secondary-hover-color: #141414;
     --text-color: #FFFFFF;
-    --accent-color-1: #494949; /* New color to replace pink */
-    --accent-color-2: #003c60; /* New color to replace blue */
+    --accent-color-1: #494949;
+    --accent-color-2: #003c60;
 }
 
 /* General Body Styling */
@@ -34,26 +34,40 @@ body {
     }
 }
 
-/* General header styling */
+/* Header Styling */
 header {
     background-color: var(--main-color);
     padding: 10px 20px;
-    height: 10vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-/* Header Adjustments */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100%;
-    position: relative;
 }
 
-/* Hide the burger menu on large screens */
+/* Fix for small screen logo and burger menu */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .burger-menu {
+        order: 2;
+    }
+}
+
+/* Burger Menu Styling */
 .burger-menu {
     display: none;
     cursor: pointer;
@@ -63,7 +77,6 @@ header {
     height: 30px;
 }
 
-/* The three lines of the burger */
 .burger-bar {
     width: 100%;
     height: 4px;
@@ -72,7 +85,7 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Hide the nav and contact button by default on small screens */
+/* Nav and Contact Button default styling */
 .nav-menu, .contact-button {
     display: flex;
 }
@@ -81,18 +94,17 @@ header {
 @media (max-width: 768px) {
     .nav-menu {
         position: absolute;
-        top: 100%; /* Drop down below the header */
+        top: 100%; 
         left: 0;
         width: 100%;
-        height: 0; /* Hidden initially */
+        height: 0;
         overflow: hidden;
         flex-direction: column;
-        background-color: var(--main-color); /* Match header background */
+        background-color: var(--main-color);
         transition: height 0.3s ease;
         z-index: 1;
     }
 
-    /* Hidden by default */
     .nav-menu ul {
         flex-direction: column;
         padding: 0;
@@ -106,17 +118,15 @@ header {
     }
 
     .contact-button {
-        display: none; /* Hidden on mobile initially */
+        display: none;
     }
 
-    /* Show the burger menu on mobile */
     .burger-menu {
         display: flex;
     }
 
-    /* Open the menu when active */
     .nav-menu.active {
-        height: 200px; /* Adjust based on the height needed to show the links */
+        height: 200px;
     }
 
     .contact-button.active {
@@ -132,20 +142,19 @@ header {
 }
 
 .burger-menu.open .burger-bar:nth-child(2) {
-    opacity: 0; /* Hide middle bar */
+    opacity: 0;
 }
 
 .burger-menu.open .burger-bar:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-
-/* Logo on the left */
+/* Logo styling */
 header .logo img {
     width: 50px;
 }
 
-/* Navigation links in the center */
+/* Navigation Links */
 header nav ul {
     list-style-type: none;
     display: flex;
@@ -169,7 +178,7 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* "Contact Us" button on the right */
+/* Contact Button */
 .contact-button .btn-contact {
     background-color: #ffffff;
     color: var(--main-color);
@@ -184,51 +193,6 @@ header nav ul li a:hover {
     background-color: #f4f4f4;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo img {
-        margin-bottom: 15px;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 15px;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-    }
-
-    .contact-button .btn-contact {
-        padding: 12px 24px;
-        width: 100%;
-        text-align: center;
-        margin-top: 15px;
-    }
-}
-
-@media (max-width: 500px) {
-    header nav ul li a {
-        font-size: 16px;
-    }
-
-    .contact-button .btn-contact {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .logo img {
-        width: 120px;
-    }
-}
-
-/* Hero Section Styling */
 /* Hero Section Styling */
 .hero {
     position: relative;
@@ -312,8 +276,6 @@ section {
     transition: margin-top 1s ease-in-out;
 }
 
-
-
 /* Section Styling */
 .section {
     padding: 40px;
@@ -382,3 +344,9 @@ section {
     text-decoration: none;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .founder {
+        width: 100%;
+    }
+}
