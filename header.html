@@ -23,6 +23,7 @@
 </header>
 
 <script>
+    // Function to dynamically load the header
     async function loadHeader() {
         try {
             const response = await fetch("header.html");
@@ -32,11 +33,11 @@
             const data = await response.text();
             document.getElementById("header-placeholder").innerHTML = data;
 
-            // Now that the header is loaded, attach the burger menu toggle functionality
-            document.getElementById("burger-menu").addEventListener("click", function() {
-                const navbar = document.getElementById("navbar");
-                const burgerMenu = document.getElementById("burger-menu");
+            // Attach burger menu functionality after loading the header
+            const burgerMenu = document.getElementById("burger-menu");
+            const navbar = document.getElementById("navbar");
 
+            burgerMenu.addEventListener("click", function() {
                 // Toggle 'active' class for showing/hiding the nav menu
                 navbar.classList.toggle("active");
 
@@ -48,9 +49,8 @@
         }
     }
 
+    // Load the header when the DOM content is fully loaded
     document.addEventListener("DOMContentLoaded", () => {
         loadHeader();
     });
 </script>
-
-
