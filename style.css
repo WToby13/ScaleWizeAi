@@ -50,23 +50,6 @@ header {
     width: 100%;
 }
 
-/* Fix for small screen logo and burger menu */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        order: 1;
-    }
-
-    .burger-menu {
-        order: 2;
-    }
-}
-
 /* Burger Menu Styling */
 .burger-menu {
     display: none;
@@ -88,52 +71,6 @@ header {
 /* Nav and Contact Button default styling */
 .nav-menu, .contact-button {
     display: flex;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .nav-menu {
-        position: absolute;
-        top: 100%; 
-        left: 0;
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        flex-direction: column;
-        background-color: var(--main-color);
-        transition: max-height 0.3s ease;
-        z-index: 1000;
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
-
-    .nav-menu ul li {
-        margin: 15px 0;
-        text-align: center;
-    }
-
-    .contact-button {
-        display: none;
-    }
-
-    .burger-menu {
-        display: flex;
-    }
-
-    .nav-menu.active {
-        max-height: 500px; /* heigh of burger menu */
-    }
-
-    .contact-button.active {
-        display: block;
-        text-align: center;
-        margin-top: 10px;
-    }
 }
 
 /* When burger is active, change its bars into an X */
@@ -196,21 +133,21 @@ header nav ul li a:hover {
 /* Hero Section Styling */
 .hero {
     position: relative;
-    height: 100vh; /* Initially full viewport height */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(40, 40, 40, 0.9); /* Overlay for enhanced text visibility */
+    background: rgba(40, 40, 40, 0.9);
     color: var(--text-color);
     text-align: center;
     padding: 20px;
-    opacity: 0; /* Start invisible */
-    animation: fadeInShrink 5s ease-out forwards; /* Full sequence: fade in and shrink */
-    overflow: hidden; /* Ensure clean transitions */
+    opacity: 0;
+    animation: fadeInShrink 5s ease-out forwards;
+    overflow: hidden;
 }
 
 .hero-content {
-    z-index: 2; /* Ensures text content is above the animated background */
+    z-index: 2;
     max-width: 800px;
 }
 
@@ -219,7 +156,7 @@ header nav ul li a:hover {
     font-size: 4rem;
     font-weight: bold;
     margin: 0;
-    color: var(--secondary-color); /* Use secondary color for emphasis */
+    color: var(--secondary-color);
 }
 
 /* Subtitle animation */
@@ -233,19 +170,19 @@ header nav ul li a:hover {
 @keyframes fadeInShrink {
     0% {
         opacity: 0;
-        height: 100vh; /* Start at full height */
+        height: 100vh;
     }
     50% {
         opacity: 1;
-        height: 100vh; /* Maintain height during fade-in */
+        height: 100vh;
     }
     100% {
         opacity: 1;
-        height: 50vh; /* Shrink to 50% of viewport height */
+        height: 50vh;
     }
 }
 
-/* Background Enhancements - maintain previous background animation */
+/* Background Enhancements */
 .hero::before {
     content: "";
     position: absolute;
@@ -281,12 +218,12 @@ section {
     padding: 40px;
     text-align: center;
     color: var(--text-color);
-    backdrop-filter: blur(5px); /* Added to enhance readability against animated background */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #about-us {
-    background-color: rgba(60, 60, 60, 0.5); /* Maintain semi-transparency */
+    background-color: rgba(60, 60, 60, 0.5);
 }
 
 #about-us h2, #about-us p {
@@ -344,8 +281,67 @@ section {
     text-decoration: none;
 }
 
-/* Responsive adjustments */
+/* Consolidated Media Queries for Mobile */
 @media (max-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .burger-menu {
+        order: 2;
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background-color: var(--main-color);
+        transition: max-height 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-menu ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        max-height: 500px;
+    }
+
+    .contact-button {
+        display: none;
+    }
+
+    .contact-button.active {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
     .founder {
         width: 100%;
     }
