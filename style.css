@@ -4,6 +4,7 @@
     --secondary-color: #3c3c3c;
     --secondary-hover-color: #141414;
     --text-color: #eef3f9;
+    --text-color-2: #51575E;
     --accent-color-1: #22272D;
     --accent-color-2: #494949;
 }
@@ -156,7 +157,7 @@ header nav ul li a:hover {
     font-size: 4rem;
     font-weight: bold;
     margin: 0;
-    color: var(--accent-color-1);
+    color: var(--text-color-2);
 }
 
 /* Subtitle animation */
