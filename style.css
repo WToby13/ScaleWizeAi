@@ -69,12 +69,6 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Nav and Contact Button default styling */
-.nav-menu, .contact-button {
-    display: flex;
-}
-
-/* When burger is active, change its bars into an X */
 .burger-menu.open .burger-bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -152,7 +146,6 @@ header nav ul li a:hover {
     max-width: 800px;
 }
 
-/* Headline animation */
 .animated-text {
     font-size: 6rem;
     font-weight: bold;
@@ -160,14 +153,12 @@ header nav ul li a:hover {
     color: var(--text-color-2);
 }
 
-/* Subtitle animation */
 .hero-subtitle {
     font-size: 1.5rem;
     margin: 20px 0;
     color: var(--text-color);
 }
 
-/* Key animation sequence: fade in and then shrink */
 @keyframes fadeInShrink {
     0% {
         opacity: 0;
@@ -196,7 +187,6 @@ header nav ul li a:hover {
     animation: gradientShift 10s ease infinite;
 }
 
-/* Subtle background gradient animation */
 @keyframes gradientShift {
     0% {
         background-position: 0% 50%;
@@ -209,12 +199,10 @@ header nav ul li a:hover {
     }
 }
 
-/* Smooth height adjustment for other sections when hero shrinks */
 section {
     transition: margin-top 1s ease-in-out;
 }
 
-/* Section Styling */
 .section {
     padding: 40px;
     text-align: center;
@@ -231,7 +219,6 @@ section {
     color: var(--text-color);
 }
 
-/* Founders Section */
 #founders {
     background-color: rgba(40, 40, 40, 0.6);
 }
@@ -267,10 +254,6 @@ section {
     text-align: center;
 }
 
-.logo img {
-    width: 50px;
-}
-
 .cta-button {
     background-color: var(--secondary-color);
     color: white;
@@ -284,6 +267,140 @@ section {
 .cta-button:hover {
     background-color: var(--secondary-hover-color);
     text-decoration: none;
+}
+
+/* Additional Styles for the New Features */
+
+/* Mission Section */
+.mission-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(40, 40, 40, 0.8);
+    margin-bottom: 50px;
+}
+
+.mission-text {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Interactive Founders Section */
+.founders-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(60, 60, 60, 0.7);
+}
+
+.founders-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.founder-card {
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.founder-front, .founder-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.8s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.founder-front {
+    transform: rotateY(0);
+}
+
+.founder-back {
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.founder-card:hover .founder-front {
+    transform: rotateY(-180deg);
+}
+
+.founder-card:hover .founder-back {
+    transform: rotateY(0);
+}
+
+.founder-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.founder-back a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Services Section */
+.services-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.service {
+    text-align: center;
+}
+
+.service img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: rgba(30, 30, 30, 0.9);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.appear {
+    opacity: 1;
 }
 
 /* Consolidated Media Queries for Mobile */
@@ -337,8 +454,6 @@ section {
         max-height: none;
     }
 
-    
-
     .burger-menu.open .burger-bar:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -350,7 +465,7 @@ section {
     .burger-menu.open .burger-bar:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
-    
+
     .contact-button {
         display: none;
     }
