@@ -262,7 +262,7 @@ section {
 }
 
 .cta-button {
-    background-color: var(--secondary-color);
+    background-color: var(--main-color);
     color: white;
     padding: 15px 30px;
     text-decoration: none;
