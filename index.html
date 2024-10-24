@@ -15,6 +15,18 @@
                 }
                 const data = await response.text();
                 document.getElementById("header-placeholder").innerHTML = data;
+    
+                // Attach burger menu functionality after the header is loaded
+                const burgerMenu = document.getElementById("burger-menu");
+                const navbar = document.getElementById("navbar");
+    
+                burgerMenu.addEventListener("click", function () {
+                    // Toggle 'active' class to show/hide the nav menu
+                    navbar.classList.toggle("active");
+    
+                    // Toggle the burger menu's open state (bars transform into X)
+                    burgerMenu.classList.toggle("open");
+                });
             } catch (error) {
                 console.error('There has been a problem with fetching the header:', error);
             }
@@ -24,6 +36,7 @@
             loadHeader();
         });
     </script>
+
 </head>
 <body>
     <div id="header-placeholder"></div>
