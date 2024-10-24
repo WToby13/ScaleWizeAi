@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Adeptable Ai</title>
+    <title>About Us - Adept AI</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -17,10 +18,109 @@
             });
     </script>
 
-    <!-- About Us Content -->
-    <section class="about">
-        <h2>About Us</h2>
-        <p>Harness the full potential and transformative power of AI. We guide businesses through the complexities of emerging, innovative technologies...</p>
+    <!-- Main About Us Content -->
+    <section class="mission-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Mission</h2>
+            <p class="mission-text fade-in">Harness the full potential and transformative power of AI. We guide businesses through the complexities of emerging, innovative technologies. Driving productivity, scaling through efficiency, and empowering organizations to reach beyond their limits.</p>
+        </div>
     </section>
+
+    <!-- Meet the Founders Section -->
+    <section class="founders-section">
+        <h2 class="section-title fade-in">Meet the Founders</h2>
+        <div class="founders-container fade-in">
+            <div class="founder-card">
+                <div class="founder-front">
+                    <img src="Fabio.jpeg" alt="Fabio Galante" class="founder-img">
+                    <h3>Fabio Galante</h3>
+                    <p>Expert in AI Strategy</p>
+                </div>
+                <div class="founder-back">
+                    <h3>Fabio Galante</h3>
+                    <p>An adaptable leader, Fabio has helped companies grow from zero to seven figures and has been a key player in multiple fundraises, including a $400m acquisition.</p>
+                    <a href="https://www.linkedin.com/in/fabiogalante/" target="_blank">Connect on LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="founder-card">
+                <div class="founder-front">
+                    <img src="Toby.jpeg" alt="W Toby Keating" class="founder-img">
+                    <h3>W Toby Keating</h3>
+                    <p>Expert in AI Implementation</p>
+                </div>
+                <div class="founder-back">
+                    <h3>W Toby Keating</h3>
+                    <p>Toby brings a wealth of experience in AI-powered product development, scaling technology from concept to market with user-centric design.</p>
+                    <a href="https://www.linkedin.com/in/william-toby-keating-3b2b73152/" target="_blank">Connect on LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="founder-card">
+                <div class="founder-front">
+                    <img src="Gustavo.jpeg" alt="Gustavo Velarde" class="founder-img">
+                    <h3>Gustavo Velarde</h3>
+                    <p>Expert in Data Analytics</p>
+                </div>
+                <div class="founder-back">
+                    <h3>Gustavo Velarde</h3>
+                    <p>Gustavo's expertise in AI-powered data analytics has driven efficiency at scale, most recently deploying a GPT-4 powered bot for Shopify's Help Center.</p>
+                    <a href="https://www.linkedin.com/in/gustavo-velarde/" target="_blank">Connect on LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Offer Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title fade-in">What We Offer</h2>
+            <div class="services-grid">
+                <div class="service fade-in">
+                    <img src="ai-automation-icon.png" alt="AI Automation Icon">
+                    <h3>AI Automation</h3>
+                    <p>We build AI solutions that automate business processes, saving you time and increasing productivity.</p>
+                </div>
+                <div class="service fade-in">
+                    <img src="ai-insights-icon.png" alt="AI Insights Icon">
+                    <h3>AI Insights</h3>
+                    <p>Unlock the potential of your data with our AI-driven analytics, helping you make informed decisions.</p>
+                </div>
+                <div class="service fade-in">
+                    <img src="ai-strategy-icon.png" alt="AI Strategy Icon">
+                    <h3>AI Strategy</h3>
+                    <p>We work with your team to create tailored AI strategies, positioning your company for future growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section">
+        <h2 class="cta-title fade-in">Ready to Transform Your Business with AI?</h2>
+        <a href="contact.html" class="cta-button fade-in">Contact Us</a>
+    </section>
+
+    <script>
+        // Script for fade-in effects on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const options = {
+            threshold: 0.5,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, options);
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
 </body>
 </html>
