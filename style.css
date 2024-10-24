@@ -223,6 +223,10 @@ section {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.section, .logo img {
+    width: 50px;
+}
+
 #about-us {
     background-color: rgba(60, 60, 60, 0.5);
 }
