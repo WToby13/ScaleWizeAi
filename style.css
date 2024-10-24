@@ -147,7 +147,7 @@ header nav ul li a:hover {
 }
 
 .animated-text {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: bold;
     margin: 0;
     color: var(--text-color-2);
@@ -187,6 +187,7 @@ header nav ul li a:hover {
     animation: gradientShift 10s ease infinite;
 }
 
+/* Subtle background gradient animation */
 @keyframes gradientShift {
     0% {
         background-position: 0% 50%;
@@ -203,6 +204,7 @@ section {
     transition: margin-top 1s ease-in-out;
 }
 
+/* section styling */
 .section {
     padding: 40px;
     text-align: center;
@@ -219,6 +221,7 @@ section {
     color: var(--text-color);
 }
 
+/* founder section */
 #founders {
     background-color: rgba(40, 40, 40, 0.6);
 }
@@ -252,6 +255,10 @@ section {
     background-color: rgba(40, 40, 40, 0.6);
     padding: 40px;
     text-align: center;
+}
+
+.logo img {
+    width: 50px;
 }
 
 .cta-button {
@@ -291,7 +298,7 @@ section {
 .founders-section {
     padding: 60px 20px;
     text-align: center;
-    background-color: rgba(60, 60, 60, 0.7);
+    background-color: clear;
 }
 
 .founders-container {
@@ -299,6 +306,7 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
+    padding: 20px;
 }
 
 .founder-card {
