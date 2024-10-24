@@ -223,10 +223,6 @@ section {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.section, .logo img {
-    width: 50px;
-}
-
 #about-us {
     background-color: rgba(60, 60, 60, 0.5);
 }
@@ -269,6 +265,10 @@ section {
     background-color: rgba(40, 40, 40, 0.6);
     padding: 40px;
     text-align: center;
+}
+
+.cta-section, .logo img {
+    width: 50px;
 }
 
 .cta-button {
