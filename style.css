@@ -334,8 +334,10 @@ section {
     }
 
     .nav-menu.active {
-        max-height: 500px;
+        max-height: none;
     }
+
+    
 
     .burger-menu.open .burger-bar:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
