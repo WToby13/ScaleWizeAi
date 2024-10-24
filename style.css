@@ -154,7 +154,7 @@ header nav ul li a:hover {
 
 /* Headline animation */
 .animated-text {
-    font-size: 8rem;
+    font-size: 6rem;
     font-weight: bold;
     margin: 0;
     color: var(--text-color-2);
