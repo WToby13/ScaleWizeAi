@@ -221,34 +221,7 @@ section {
     color: var(--text-color);
 }
 
-/* founder section */
-#founders {
-    background-color: rgba(40, 40, 40, 0.6);
-}
 
-.founders-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.founder {
-    background-color: rgba(60, 60, 60, 0.7);
-    border-radius: 10px;
-    padding: 20px;
-    width: 30%;
-    margin: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.founder-headshot {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 15px;
-}
 
 /* CTA Section Styling */
 .cta-section {
@@ -295,6 +268,11 @@ section {
 }
 
 /* Interactive Founders Section */
+/* founder section */
+#founders {
+    background-color: rgba(40, 40, 40, 0.6);
+}
+
 .founders-section {
     padding: 60px 20px;
     text-align: center;
