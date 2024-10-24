@@ -262,7 +262,7 @@ section {
 }
 
 .cta-button {
-    background-color: var(--main-color);
+    background-color: #FFFFFF;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -303,10 +303,11 @@ section {
 
 .founders-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 40px;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .founder-card {
