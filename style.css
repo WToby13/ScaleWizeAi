@@ -45,6 +45,7 @@ header {
 }
 
 .header-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -393,6 +394,7 @@ section {
 /* Consolidated Media Queries for Mobile */
 @media (max-width: 768px) {
     .header-container {
+        position: relative;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
