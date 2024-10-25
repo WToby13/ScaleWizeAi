@@ -117,6 +117,28 @@
         <h2 class="cta-title fade-in">Ready to Transform Your Business with AI?</h2>
         <a href="contact.html" class="cta-button fade-in">Contact Us</a>
     </section>
+    
+    <script>
+        // Script for fade-in effects on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const options = {
+            threshold: 0.5,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, options);
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
 </body>
 </html>
 
