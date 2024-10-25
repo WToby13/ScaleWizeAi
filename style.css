@@ -439,6 +439,8 @@ section {
 
     .nav-menu.active {
         max-height: none;
+        position: absolute;
+        top: 100%;
     }
 
     .burger-menu.open .burger-bar:nth-child(1) {
