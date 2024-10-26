@@ -10,11 +10,35 @@
     <div id="header-placeholder"></div>
 
     <script>
-        fetch("header.html")
-            .then(response => response.text())
-            .then(data => {
+        async function loadHeader() {
+            try {
+                const response = await fetch("header.html");
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.text();
                 document.getElementById("header-placeholder").innerHTML = data;
-            });
+    
+                // Attach burger menu functionality after the header is loaded
+                const burgerMenu = document.getElementById("burger-menu");
+                const navbar = document.getElementById("navbar");
+                
+                burgerMenu.addEventListener("click", function () {
+                    // Toggle 'active' class to show/hide the nav menu
+                    navbar.classList.toggle("active");
+                
+                    // Toggle the burger menu's open state (bars transform into X)
+                    burgerMenu.classList.toggle("open");
+                });
+
+            } catch (error) {
+                console.error('There has been a problem with fetching the header:', error);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            loadHeader();
+        });
     </script>
 
     <!-- Solutions Content -->
