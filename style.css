@@ -113,8 +113,8 @@ header nav ul li a:hover {
 
 /* Contact Button */
 .contact-button .btn-contact {
-    background-color: red;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: var(--main-color);
     padding: 8px 16px;
     border-radius: 5px;
     text-decoration: none;
@@ -226,7 +226,7 @@ section {
 
 /* CTA Section Styling */
 .cta-section {
-    background-color: rgba(40, 40, 40, 0.6);
+    background-color: clear;
     padding: 40px;
     text-align: center;
 }
@@ -256,7 +256,7 @@ section {
 .mission-section {
     padding: 60px 20px;
     text-align: center;
-    background-color: rgba(40, 40, 40, 0.8);
+    background-color: clear;
     margin-bottom: 50px;
 }
 
