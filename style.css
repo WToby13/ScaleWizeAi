@@ -222,34 +222,6 @@ section {
     color: var(--text-color);
 }
 
-
-
-/* CTA Section Styling */
-.cta-section {
-    background-color: clear;
-    padding: 40px;
-    text-align: center;
-}
-
-.logo img {
-    width: 50px;
-}
-
-.cta-button {
-    background-color: #FFFFFF;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.cta-button:hover {
-    background-color: var(--secondary-hover-color);
-    text-decoration: none;
-}
-
 /* Additional Styles for the New Features */
 
 /* Mission Section */
@@ -366,7 +338,7 @@ section {
 
 /* CTA Section */
 .cta-section {
-    background-color: rgba(30, 30, 30, 0.9);
+    background-color: clear;
     text-align: center;
     padding: 40px 20px;
 }
@@ -380,6 +352,16 @@ section {
     text-decoration: none;
     display: inline-block;
     margin-top: 20px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-hover-color);
+    text-decoration: none;
+}
+
+.logo img {
+    width: 50px;
 }
 
 .fade-in {
