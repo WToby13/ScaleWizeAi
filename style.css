@@ -113,8 +113,8 @@ header nav ul li a:hover {
 
 /* Contact Button */
 .contact-button .btn-contact {
-    background-color: #ffffff;
-    color: var(--main-color);
+    background-color: red;
+    color: #ffffff;
     padding: 8px 16px;
     border-radius: 5px;
     text-decoration: none;
