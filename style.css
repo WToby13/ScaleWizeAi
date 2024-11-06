@@ -11,7 +11,7 @@
 
 /* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: commissioner, regular;
     margin: 0;
     padding: 0;
     background: linear-gradient(-45deg, var(--main-color), var(--accent-color-1), var(--secondary-color), var(--accent-color-2));
