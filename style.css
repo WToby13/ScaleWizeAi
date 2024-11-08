@@ -240,6 +240,106 @@ section {
     margin-right: auto;
 }
 
+/* Our Approach Section Styling */
+.approach-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--text-color);
+}
+
+.approach-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 40px;
+}
+
+.line {
+    width: 3px;
+    height: 200px; /* Adjust based on desired spacing */
+    background: var(--text-color-2);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.step {
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    margin: 40px 0;
+}
+
+.step.right .step-content {
+    margin-left: auto;
+    text-align: left;
+}
+
+.step.left .step-content {
+    margin-right: auto;
+    text-align: right;
+}
+
+.step-content {
+    background: rgba(40, 40, 40, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.step ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.step ul li {
+    margin: 5px 0;
+}
+
+/* Fade-in animations */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.appear {
+    opacity: 1;
+}
+
+/* Intersection Observer for fade-in effect */
+const steps = document.querySelectorAll('.fade-in');
+const observerOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const onScrollObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('appear');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+steps.forEach(step => {
+    onScrollObserver.observe(step);
+});
+
+
+
 /* Interactive Founders Section */
 /* founder section */
 #founders {
