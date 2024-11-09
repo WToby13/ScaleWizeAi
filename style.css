@@ -267,7 +267,7 @@ section {
 }
 
 .step {
-    width: 80%;
+    width: 45%;
     max-width: 600px;
     margin: 40px 0;
     padding: 20px;
@@ -288,10 +288,12 @@ section {
 }
 
 .step h3 {
+    font-size: 1.2em;
     margin: 0 0 10px;
 }
 
 .step ul {
+    font-size: 0.9em;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -300,6 +302,11 @@ section {
 
 .step ul li {
     margin: 5px 0;
+}
+
+.step img {
+    max-width: 50px; 
+    margin-bottom: 10px;
 }
 
 .step.right {
