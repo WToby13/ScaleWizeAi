@@ -275,7 +275,7 @@ section {
     max-width: 600px;
     margin: 40px 20px;
     padding: 20px;
-    background-color: rgba(60, 60, 60, 0.7);
+    background-color: clear;
     border-radius: 8px;
     display: flex;
     flex-direction: column; /* Changed to vertical alignment */
