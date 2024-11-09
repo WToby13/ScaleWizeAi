@@ -252,9 +252,11 @@ section {
 
 .approach-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
     position: relative;
+    flex-wrap: wrap; /* Allows flexibility for smaller screens */
 }
 
 .line {
@@ -262,6 +264,8 @@ section {
     width: 3px;
     height: 100%;
     background-color: var(--text-color);
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -269,13 +273,14 @@ section {
 .step {
     width: 45%;
     max-width: 600px;
-    margin: 40px 0;
+    margin: 40px 20px;
     padding: 20px;
     background-color: rgba(60, 60, 60, 0.7);
     border-radius: 8px;
     display: flex;
+    flex-direction: column; /* Changed to vertical alignment */
     align-items: flex-start;
-    gap: 15px;
+    gap: 10px;
     position: relative;
     opacity: 0;
     transition: transform 1s, opacity 1s ease-in-out;
@@ -288,12 +293,12 @@ section {
 }
 
 .step h3 {
-    font-size: 1.2em;
-    margin: 0 0 10px;
+    font-size: 1.1em; /* Adjusted for better fit */
+    margin: 0 0 8px;
 }
 
 .step ul {
-    font-size: 0.9em;
+    font-size: 0.85em; /* Adjusted for better fit */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -305,18 +310,18 @@ section {
 }
 
 .step img {
-    max-width: 50px; 
+    max-width: 50px;
     margin-bottom: 10px;
 }
 
 .step.right {
-    transform: translateX(100px);
-    text-align: right;
+    text-align: left; /* Ensure alignment without overlap */
+    margin-left: auto;
 }
 
 .step.left {
-    transform: translateX(-100px);
-    text-align: left;
+    text-align: left; /* Ensure alignment without overlap */
+    margin-right: auto;
 }
 
 /* Fade-in effect when visible */
@@ -332,17 +337,32 @@ section {
 
 /* Adjustments for responsiveness */
 @media (max-width: 768px) {
-    .step {
-        width: 100%;
+    .approach-content {
         flex-direction: column;
         align-items: center;
+    }
+
+    .line {
+        display: none; /* Hide line on smaller screens for simplicity */
+    }
+
+    .step {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .step h3 {
         text-align: center;
     }
+
     .step.right, .step.left {
-        transform: translateX(0);
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
     }
 }
-
 
 
 
