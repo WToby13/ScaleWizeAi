@@ -54,41 +54,34 @@
     <section class="approach-section">
         <div class="container">
             <h2 class="section-title fade-in">Our Approach</h2>
-            <div class="approach-container">
-                <div class="step right fade-in">
-                    <div class="step-content">
-                        <img src="WhiteLogo.png" alt="Step 1" class="step-icon">
-                        <h3>1. Strategic Analysis</h3>
-                        <ul>
-                            <li>What systems & processes do you use</li>
-                            <li>Identify problem areas, big & small</li>
-                            <li>Develop an initial strategy</li>
-                        </ul>
-                    </div>
+            <div class="approach-content">
+                <div class="line"></div>
+                <div class="step fade-in right">
+                    <img src="WhiteLogo.png" alt="Step 1 Icon" class="step-icon">
+                    <h3>Strategic Analysis</h3>
+                    <ul>
+                        <li>Identify seamless integration into current workflows</li>
+                        <li>Identify opportunities for automation</li>
+                        <li>Develop an iterative & scaling strategy</li>
+                    </ul>
                 </div>
-                <div class="line fade-in"></div>
-                <div class="step left fade-in">
-                    <div class="step-content">
-                        <img src="WhiteLogo.png" alt="Step 2" class="step-icon">
-                        <h3>2. Implementation</h3>
-                        <ul>
-                            <li>Implement quick wins for early results</li>
-                            <li>Lay groundwork for future development</li>
-                            <li>Tackle bigger and more complex initiatives</li>
-                        </ul>
-                    </div>
+                <div class="step fade-in left">
+                    <img src="WhiteLogo.png" alt="Step 2 Icon" class="step-icon">
+                    <h3>Implementation</h3>
+                    <ul>
+                        <li>Implement quick wins for early results</li>
+                        <li>Lay groundwork for future development</li>
+                        <li>Tackle bigger and more complex initiatives</li>
+                    </ul>
                 </div>
-                <div class="line fade-in"></div>
-                <div class="step right fade-in">
-                    <div class="step-content">
-                        <img src="WhiteLogo.png" alt="Step 3" class="step-icon">
-                        <h3>3. Evaluate & Iterate</h3>
-                        <ul>
-                            <li>Evaluate ROI</li>
-                            <li>Continue to develop on optimizations</li>
-                            <li>Adapt to new technologies and solutions</li>
-                        </ul>
-                    </div>
+                <div class="step fade-in right">
+                    <img src="WhiteLogo.png" alt="Step 3 Icon" class="step-icon">
+                    <h3>Evaluate & Iterate</h3>
+                    <ul>
+                        <li>Evaluate ROI</li>
+                        <li>Continue to develop on optimizations</li>
+                        <li>Adapt to new technologies and solutions</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -170,6 +163,7 @@
         <a href="contact.html" class="cta-button fade-in">Contact Us</a>
     </section>
 
+ <!-- Scroll-triggered animations script -->
     <script>
         // Script for fade-in effects on scroll
         const faders = document.querySelectorAll('.fade-in');
@@ -179,16 +173,32 @@
         };
         const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
             entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
-                    entry.target.classList.add('appear');
-                    appearOnScroll.unobserve(entry.target);
-                }
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                appearOnScroll.unobserve(entry.target);
             });
         }, options);
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
+        faders.forEach(fader => appearOnScroll.observe(fader));
+
+        // Scroll Animation for Our Approach Section
+        document.addEventListener("DOMContentLoaded", function() {
+            const approachSection = document.querySelector('.approach-section');
+            const steps = document.querySelectorAll('.step');
+            const line = document.querySelector('.line');
+            const observerOptions = {
+                threshold: 0.3
+            };
+            function handleIntersection(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }
+            const observer = new IntersectionObserver(handleIntersection, observerOptions);
+            steps.forEach(step => observer.observe(step));
+            observer.observe(line);
         });
     </script>
 </body>
