@@ -54,39 +54,52 @@
     <section class="approach-section">
         <div class="container">
             <h2 class="section-title fade-in">Our Approach</h2>
-            <div class="approach-content">
-                <div class="line"></div>
-                <div class="step fade-in right">
-                    <img src="WhiteLogo.png" alt="Step 1 Icon" class="step-icon">
-                    <h3>Strategic Analysis</h3>
-                    <ul>
-                        <li>Identify seamless integration into current workflows</li>
-                        <li>Identify opportunities for automation</li>
-                        <li>Develop an iterative & scaling strategy</li>
-                    </ul>
+            <div class="approach-steps-container">
+                <div class="step" id="step1">
+                    <div class="bullet"><img src="WhiteLogo.png" alt="Step 1 Bullet"></div>
+                    <div class="step-content">
+                        <h3 class="step-title">Strategic Analysis</h3>
+                        <div class="sub-points">
+                            <p>- Identify seamless integration into current workflows</p>
+                            <p>- Identify opportunities for automation</p>
+                            <p>- Develop an iterative & scaling strategy</p>
+                        </div>
+                        <p class="step-description">
+                            This strategic analysis is ongoing, assessing your business opportunities for improvement and the constant development in the AI space.
+                        </p>
+                    </div>
                 </div>
-                <div class="step fade-in left">
-                    <img src="WhiteLogo.png" alt="Step 2 Icon" class="step-icon">
-                    <h3>Implementation</h3>
-                    <ul>
-                        <li>Implement quick wins for early results</li>
-                        <li>Lay groundwork for future development</li>
-                        <li>Tackle bigger and more complex initiatives</li>
-                    </ul>
+                <div class="step" id="step2">
+                    <div class="bullet"><img src="WhiteLogo.png" alt="Step 2 Bullet"></div>
+                    <div class="step-content">
+                        <h3 class="step-title">Implementation</h3>
+                        <div class="sub-points">
+                            <p>- Implement quick wins for early results</p>
+                            <p>- Lay groundwork for future development</p>
+                            <p>- Tackle bigger and more complex initiatives</p>
+                        </div>
+                        <p class="step-description">
+                            We get to work fast, with quick implementation of tools and preparing the foundation for bigger AI adoption.
+                        </p>
+                    </div>
                 </div>
-                <div class="step fade-in right">
-                    <img src="WhiteLogo.png" alt="Step 3 Icon" class="step-icon">
-                    <h3>Evaluate & Iterate</h3>
-                    <ul>
-                        <li>Evaluate ROI</li>
-                        <li>Continue to develop on optimizations</li>
-                        <li>Adapt to new technologies and solutions</li>
-                    </ul>
+                <div class="step" id="step3">
+                    <div class="bullet"><img src="WhiteLogo.png" alt="Step 3 Bullet"></div>
+                    <div class="step-content">
+                        <h3 class="step-title">Evaluate & Iterate</h3>
+                        <div class="sub-points">
+                            <p>- Deliver & Evaluate ROI</p>
+                            <p>- Continue to develop on optimizations</p>
+                            <p>- Adapt to new AI developments and solutions</p>
+                        </div>
+                        <p class="step-description">
+                            With the iterative approach, we are quick to show results, proving the ROI before committing to bigger adoption. Building trust and a reliable partnership for the future.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- Meet the Founders Section -->
     <section class="founders-section">
@@ -180,26 +193,29 @@
         }, options);
         faders.forEach(fader => appearOnScroll.observe(fader));
 
-        // Scroll Animation for Our Approach Section
-        document.addEventListener("DOMContentLoaded", function() {
-            const approachSection = document.querySelector('.approach-section');
-            const steps = document.querySelectorAll('.step');
-            const line = document.querySelector('.line');
-            const observerOptions = {
-                threshold: 0.3
-            };
-            function handleIntersection(entries, observer) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('appear');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }
-            const observer = new IntersectionObserver(handleIntersection, observerOptions);
-            steps.forEach(step => observer.observe(step));
-            observer.observe(line);
+        // Scroll-in animation for steps
+        const steps = document.querySelectorAll('.step');
+        const approachObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        steps.forEach(step => {
+            approachObserver.observe(step);
         });
+        
+        // Click to toggle sub-points and descriptions
+        const stepTitles = document.querySelectorAll('.step-title');
+        stepTitles.forEach(title => {
+            title.addEventListener('click', () => {
+                title.classList.toggle('active');
+            });
+        });
+
     </script>
 </body>
 </html>
