@@ -243,127 +243,90 @@ section {
 /* Our Approach Section Styling */
 .approach-section {
     padding: 60px 20px;
-    background-color: rgba(40, 40, 40, 0.7);
-    color: var(--text-color);
     text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
-.approach-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
+.approach-steps-container {
     position: relative;
-    flex-wrap: wrap; /* Allows flexibility for smaller screens */
-}
-
-.line {
-    position: absolute;
-    width: 3px;
-    height: 100%;
-    background-color: var(--text-color);
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
 .step {
-    width: 45%;
-    max-width: 600px;
-    margin: 40px 20px;
-    padding: 20px;
-    background-color: clear;
-    border-radius: 8px;
     display: flex;
-    flex-direction: column; /* Changed to vertical alignment */
     align-items: flex-start;
-    gap: 10px;
+    gap: 20px;
     position: relative;
     opacity: 0;
-    transition: transform 1s, opacity 1s ease-in-out;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
-.step-icon {
+.step .bullet {
     width: 40px;
     height: 40px;
     flex-shrink: 0;
 }
 
-.step h3 {
-    font-size: 1.1em; /* Adjusted for better fit */
-    margin: 0 0 8px;
+.step .bullet img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.step ul {
-    font-size: 0.85em; /* Adjusted for better fit */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    color: var(--text-color-2);
+.step-content {
+    text-align: left;
+    background: transparent;
+    padding: 10px;
 }
 
-.step ul li {
-    margin: 5px 0;
-}
-
-.step img {
-    max-width: 50px;
+.step-title {
+    font-size: 1.5rem;
+    cursor: pointer;
     margin-bottom: 10px;
+    transition: color 0.3s ease-in-out;
 }
 
-.step.right {
-    text-align: left; /* Ensure alignment without overlap */
-    margin-left: auto;
+.step-title:hover {
+    color: var(--accent-color-1);
 }
 
-.step.left {
-    text-align: left; /* Ensure alignment without overlap */
-    margin-right: auto;
+.sub-points {
+    display: none;
+    margin-left: 10px;
 }
 
-/* Fade-in effect when visible */
-.appear {
+.step-description {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Line Styling */
+.approach-steps-container::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, white, var(--accent-color-1));
+    z-index: -1;
+    transition: background 0.6s ease-in-out;
+}
+
+/* Scroll Fade-In Effect */
+.step.appear {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
-/* Animate central line appearance */
-.line.appear {
-    opacity: 1;
+/* Expand/Collapse Behavior on Click */
+.step-title.active + .sub-points,
+.step-title.active + .sub-points + .step-description {
+    display: block;
 }
-
-/* Adjustments for responsiveness */
-@media (max-width: 768px) {
-    .approach-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .line {
-        display: none; /* Hide line on smaller screens for simplicity */
-    }
-
-    .step {
-        width: 100%;
-        margin: 20px 0;
-        text-align: center;
-        align-items: center;
-    }
-
-    .step h3 {
-        text-align: center;
-    }
-
-    .step.right, .step.left {
-        margin-left: 0;
-        margin-right: 0;
-        text-align: center;
-    }
-}
-
 
 
 /* Interactive Founders Section */
