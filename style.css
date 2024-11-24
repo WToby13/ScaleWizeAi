@@ -149,23 +149,6 @@ header nav ul li a:hover {
     padding: 20px;
 }
 
-.hero.parallax {
-    background: url('WhiteLogo.png') no-repeat center fixed;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-color);
-    text-align: center;
-    position: relative;
-}
-
-.parallax {
-    position: relative;
-    background-attachment: fixed;
-}
-
 .animated-text {
     font-size: 4rem;
     font-weight: bold;
