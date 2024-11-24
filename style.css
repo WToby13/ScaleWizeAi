@@ -143,6 +143,12 @@ header nav ul li a:hover {
     overflow: hidden;
 }
 
+.hero-content {
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
 .hero.parallax {
     background: url('WhiteLogo.png') no-repeat center fixed;
     background-size: cover;
@@ -153,12 +159,6 @@ header nav ul li a:hover {
     color: var(--text-color);
     text-align: center;
     position: relative;
-}
-
-.hero-content {
-    z-index: 2;
-    max-width: 800px;
-    padding: 20px;
 }
 
 .parallax {
