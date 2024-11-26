@@ -421,14 +421,13 @@ section {
 }
 
 .cta-button {
-    color: #fff;
-    padding: 15px 30px;
+    background-color: #ffffff;
+    color: var(--main-color);
+    padding: 8px 16px;
     border-radius: 5px;
-    font-size: 1.2rem;
     text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .cta-button:hover {
