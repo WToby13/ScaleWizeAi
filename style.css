@@ -415,7 +415,7 @@ section {
 
 /* CTA Section */
 .cta-section {
-    background-color: #fff;
+    background-color: clear;
     text-align: center;
     padding: 40px 20px;
 }
