@@ -400,6 +400,7 @@ section {
 @media (max-width: 768px) {
     .timeline-item {
         flex-direction: column;
+        text-align: center;
     }
     .timeline-content {
         flex-direction: column;
