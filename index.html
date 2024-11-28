@@ -95,11 +95,11 @@
         <!-- Call-to-Action Section -->
     <section class="cta-section">
         <h2 class="cta-title fade-in">Ready to Transform Your Business with AI?</h2>
-        <div class="contact-button">
-            <a href="#" class="btn-contact" id="contact button">
-                Schedule a Meeting
-            </a>
-        </div>
+        <!-- Calendly link widget begin -->
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/scalewizeai/30min'});return false;">Book a free consultation</a>
+            <!-- Calendly link widget end -->
     </section>
 
     <!-- Calendly badge widget begin -->
@@ -129,21 +129,6 @@
             appearOnScroll.observe(fader);
         });
     </script>
-
-    <!-- Calandly popup -->
-    <script 
-        type="text/javascript" 
-        src="https://assets.calendly.com/assets/external/widget.js">
-    </script>
-    
-    <script>
-        document.getElementById("schedule-meeting").addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent default link behavior
-            Calendly.initPopupWidget({ url: 'https://calendly.com/scalewizeai/30min' });
-        });
-
-    </script>
-
     
      <script>   
             // Attach burger menu functionality after loading the header
