@@ -9,7 +9,7 @@
     <header>
        <div class="header-container">
           <div class="logo">
-             <img src="WhiteLogo.png" alt="Adeptable AI Logo">
+             <img src="scalewizewhitelogo.png" alt="ScaleWize AI Logo">
           </div>
     
           <nav id="navbar" class="nav-menu">
@@ -34,6 +34,7 @@
     </header>
 
 </head>
+    
 <body>
     <div id="header-placeholder"></div>
 
@@ -46,7 +47,7 @@
 
     <section id="about-us" class="section cta-section">
         <div class="logo fade-in">
-            <img src="swaiwhitelogo.png" alt="Adeptable AI Logo">
+            <img src="swaiwhitelogo.png" alt="ScaleWize AI Logo">
         </div>
         <p class="mission-text fade-in">Harness the full potential and transformative power of AI. We guide businesses through the complexities of emerging, innovative technologies. Driving productivity, scaling through efficiency, and empowering organizations to reach beyond their limits.</p>
     </section>
@@ -117,7 +118,26 @@
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
         });
-    </script>
+            // Attach burger menu functionality after loading the header
+            const burgerMenu = document.getElementById("burger-menu");
+            const navbar = document.getElementById("navbar");
+    
+            burgerMenu.addEventListener("click", function() {
+                // Toggle 'active' class for showing/hiding the nav menu
+                navbar.classList.toggle("active");
+    
+                // Toggle the burger menu's open state (bars transform into X)
+                burgerMenu.classList.toggle("open");
+            });
+        } catch (error) {
+            console.error('There has been a problem with fetching the header:', error);
+        }
+    
+        // Load the header when the DOM content is fully loaded
+        document.addEventListener("DOMContentLoaded", () => {
+            loadHeader();
+        });
+</script>
 </body>
 </html>
 
