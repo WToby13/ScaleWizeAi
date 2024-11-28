@@ -113,7 +113,7 @@ header nav ul li a:hover {
 }
 
 /* Contact Button */
-.contact-button {
+.contact-button .btn-contact{
     background-color: #ffffff;
     color: var(--main-color);
     padding: 8px 16px;
@@ -123,7 +123,7 @@ header nav ul li a:hover {
     font-size: 18px;
 }
 
-.contact-button:hover {
+.contact-button .btn-contact:hover{
     background-color: #f4f4f4;
 }
 
