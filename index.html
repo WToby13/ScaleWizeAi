@@ -95,9 +95,8 @@
         <!-- Call-to-Action Section -->
     <section class="cta-section">
         <h2 class="cta-title fade-in">Ready to Transform Your Business with AI?</h2>
-        <a href="#" onlink="Calendly.initPopupWidget({ url: 'https://calendly.com/scalewizeai/30min' }); return false; class="cta-button fade-in;"> 
-            Contact Us
-        </a>
+        <button id="schedule-meeting">Schedule a Meeting</button>
+
     </section>
     
     <script>
@@ -123,15 +122,13 @@
     </script>
 
     <script type="text/javascript" 
-        src="https://assets.calendly.com/assets/external/widget.js">
+            src="https://assets.calendly.com/assets/external/widget.js">
     </script>
-    
     <script>
         document.getElementById("schedule-meeting").addEventListener("click", function () {
             Calendly.initPopupWidget({ url: 'https://calendly.com/scalewizeai/30min' });
         });
     </script>
-
     
      <script>   
             // Attach burger menu functionality after loading the header
