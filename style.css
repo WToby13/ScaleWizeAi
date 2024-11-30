@@ -55,6 +55,10 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    postion: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 /* Burger Menu Styling */
