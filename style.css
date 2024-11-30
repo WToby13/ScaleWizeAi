@@ -61,6 +61,23 @@ header {
     z-index: 1000;
 }
 
+.header-container a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-container img {
+    height: 40px;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.header-container a:hover {
+    text-decoration: underline;
+}
+
 /* Burger Menu Styling */
 .burger-menu {
     display: none;
