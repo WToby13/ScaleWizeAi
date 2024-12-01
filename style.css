@@ -48,7 +48,6 @@ body {
     padding: 10px 20px;
     background: clear; /* Transparent background */
     z-index: 1000;
-    backdrop-filter: blur(10px);
 }
 
 .nav-icons {
