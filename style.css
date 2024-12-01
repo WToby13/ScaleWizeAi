@@ -80,7 +80,7 @@ body {
     top: 50%; /* Vertically center-align tooltip */
     left: calc(100% + 10px); /* Position to the right of the icon */
     transform: translateY(-50%); /* Adjust to align */
-    background-color: var(--main-color);
+    background-color: rgba(0, 0, 0, 0.5);
     color: var(--text-color);
     padding: 5px 10px;
     border-radius: 5px;
@@ -381,7 +381,7 @@ section {
 }
 
 .timeline-text p {
-    color: var(--text-color-2);
+    color: var(--text-color-3);
     margin: 0;
 }
 
