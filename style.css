@@ -46,7 +46,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: rgba(40, 40, 40, 0.8); /* Transparent background */
+    background: clear; /* Transparent background */
     z-index: 1000;
     backdrop-filter: blur(10px);
 }
@@ -106,12 +106,12 @@ header .logo img {
     background-color: #fff;
     color: var(--main-color);
     padding: 8px 16px;
-    border-radius: 5px;
+    border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
     white-space: nowrap;
-    margin-right: 20px;
+    margin-right: 50px;
     transition: opacity 0.3s ease;
 }
 
