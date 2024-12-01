@@ -468,6 +468,10 @@ section {
         display: none;
     }
 
+    .cta-button {
+        display: none;
+    }
+
     .contact-button.active {
         display: block;
         text-align: center;
