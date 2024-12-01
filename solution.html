@@ -3,54 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solutions - Adeptable Ai</title>
+    <title>ScaleWize Ai - Articles</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="header-placeholder"></div>
-
-    <script>
-        async function loadHeader() {
-            try {
-                const response = await fetch("header.html");
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.text();
-                document.getElementById("header-placeholder").innerHTML = data;
     
-                // Attach burger menu functionality after the header is loaded
-                const burgerMenu = document.getElementById("burger-menu");
-                const navbar = document.getElementById("navbar");
-                
-                burgerMenu.addEventListener("click", function () {
-                    // Toggle 'active' class to show/hide the nav menu
-                    navbar.classList.toggle("active");
-                
-                    // Toggle the burger menu's open state (bars transform into X)
-                    burgerMenu.classList.toggle("open");
-                });
+    <header>
+        <div class="header-container">
+            <div class="nav-icons">
+                <!-- Home Link -->
+                <a href="index.html" class="nav-icon">
+                    <img src="scalewizewhitelogo.png" alt="ScaleWise Logo">
+                    <span class="tooltip">Home</span>
+                </a>
+                <!-- Content Link -->
+                <a href="solution.html" class="nav-icon">
+                    <img src="swaiarticle.png" alt="Article Symbol">
+                    <span class="tooltip">Content</span>
+                </a>
+            </div>
+            <!-- Book Consultation -->
+            <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/scalewizeai/30min'}); return false;" class="btn-contact">
+                Book Free Consultation
+            </a>
+        </div>
+    </header>
 
-            } catch (error) {
-                console.error('There has been a problem with fetching the header:', error);
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            loadHeader();
-        });
-    </script>
-
-    <!-- Solutions Content -->
-    <section class="solutions">
-        <h2>Our Solutions</h2>
-        <p>We offer tailored AI solutions to help businesses optimize processes, improve decision-making, and enhance productivity...</p>
-    </section>
-
+    <!-- Notion Content -->
 <iframe 
     src="https://v2-embednotion.com/14b2f0d60032803e8c8ef6691d798735" 
-    style="width: 75%; height: 500px; border: 2px solid #ccc; border-radius: 10px; padding: none; position: center;">
+    style="width: 75%; height: 1500px; border: 2px solid #ccc; border-radius: 10px; padding: none; position: center;">
 </iframe>
+
+            <!-- Call-to-Action Section -->
+    <section class="cta-section">
+        <h2 class="cta-title fade-in">Ready to Transform Your Business with AI?</h2>
+        <!-- Calendly link widget begin -->
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+            <a href="" 
+               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/scalewizeai/30min'}); return false;" 
+               class="cta-button">
+               Book Free Consultation
+            </a>
+
+            <!-- Calendly link widget end -->
+    </section>
+
+            <!-- Calendly badge widget begin -->
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+            <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/scalewizeai/30min', text: 'Book Free Consultation', color: '#0069ff', textColor: '#ffffff' }); }</script>
+            <!-- Calendly badge widget end -->
 
 </body>
 </html>
