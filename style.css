@@ -54,7 +54,7 @@ body {
 .nav-icons {
     display: flex;
     flex-direction: column; /* Stack icons vertically */
-    gap: 20px; /* Space between icons */
+    gap: 2px; /* Space between icons */
 }
 
 .nav-icon {
@@ -421,8 +421,8 @@ section {
 .cta-button {
     background-color: #ffffff;
     color: var(--main-color);
-    padding: 8px 16px;
-    border-radius: 5px;
+    padding: 8px 22px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
