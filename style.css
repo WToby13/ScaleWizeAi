@@ -8,6 +8,8 @@
     --text-color-3: #d9d9d9;
     --accent-color-1: #22272D;
     --accent-color-2: #494949;
+    --btn-color: #ffffff;
+    --btn-hover-color: #d9d9d9;
 }
 
 /* General Body Styling */
@@ -103,7 +105,7 @@ header .logo img {
 
 /* Book Consultation Button */
 .btn-contact {
-    background-color: #fff;
+    background-color: var(--btn-color);
     color: var(--main-color);
     padding: 8px 22px;
     border-radius: 20px;
@@ -116,7 +118,7 @@ header .logo img {
 }
 
 .btn-contact:hover {
-    background-color: #f4f4f4;
+    background-color: var(--btn-hover-color);
 }
 
 @media (max-width: 768px) {
@@ -419,17 +421,17 @@ section {
 }
 
 .cta-button {
-    background-color: #ffffff;
+    background-color: var(--btn-hover-color);
     color: var(--main-color);
     padding: 8px 22px;
-    border-radius: 10px;
+    border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
 }
 
 .cta-button:hover {
-    background-color: var(--secondary-hover-color);
+    background-color: var(--btn-hover-color);
     text-decoration: none;
 }
 
