@@ -5,7 +5,7 @@
     --secondary-hover-color: #141414;
     --text-color: #eef3f9;
     --text-color-2: #51575E;
-    --text-color-3: #d9d9d9;
+    --text-color-3: #ffffff;
     --accent-color-1: #22272D;
     --accent-color-2: #494949;
     --btn-color: #0069ff;
@@ -111,7 +111,7 @@ header .logo img {
     border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     white-space: nowrap;
     margin-right: 50px;
     transition: opacity 0.3s ease;
@@ -427,7 +427,7 @@ section {
     border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .cta-button:hover {
