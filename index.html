@@ -40,35 +40,38 @@
         </div>
     </section>
 
-    <section id="examples" class="examples-section fade-in">
-        <div class="examples-slider">
-            <img src="example1.png" alt="Example Diagram 1" class="example-image active">
-            <img src="example2.png" alt="Example Diagram 2" class="example-image">
-            <img src="example3.png" alt="Example Diagram 3" class="example-image">
-        </div>
-    </section>
-
     <section id="integrations" class="section integrations-section fade-in">
-      <!-- Wrapper to constrain width for both text and image -->
-      <div class="integrations-content">
-        <h2 class="section-title">Integrations</h2>
-        <h3 class="integrations-subtitle">
-          300+ integrations plus custom webhooks and http requests
-        </h3>
-        <img
-          src="integrations.png"
-          alt="Integrations"
-          class="integrations-image"
-        />
-      </div>
+        <h2 class="section-title">300+ integrations</h2>
+        <h3 class="integrations-subtitle">Plus custom webhooks and integrations</h3>
+        <img src="integrations.png" alt="Integrations" class="integrations-image">
     </section>
-
 
     <section id="about-us" class="section cta-section">
         <div class="logo fade-in">
             <img src="swaiwhitelogo.png" alt="ScaleWize AI Logo">
         </div>
         <p class="mission-text fade-in">Harness the full potential and transformative power of AI. We guide businesses through the complexities of emerging, innovative technologies. Driving productivity, scaling through efficiency, and empowering organizations to reach beyond their limits.</p>
+    </section>
+
+    <section id="solutions" class="section solutions-section fade-in">
+        <h2 class="section-title">Solutions</h2>
+        <div class="slider-container">
+            <div class="slide active-slide">
+                <img src="example1.png" alt="Example 1">
+                <h3>Solution Title 1</h3>
+                <p>Brief description of the first example solution.</p>
+            </div>
+            <div class="slide">
+                <img src="example2.png" alt="Example 2">
+                <h3>Solution Title 2</h3>
+                <p>Brief description of the second example solution.</p>
+            </div>
+            <div class="slide">
+                <img src="example3.png" alt="Example 3">
+                <h3>Solution Title 3</h3>
+                <p>Brief description of the third example solution.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Services Section with Timeline -->
@@ -152,26 +155,19 @@
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
         });
+    </script>
 
-        // New script for Slider rotates every 10 seconds
-        let currentIndex = 0;
-        const exampleImages = document.querySelectorAll('.example-image');
-        const totalImages = exampleImages.length;
+        <!-- Script for Slider (rotates every 15 seconds) -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider-container .slide');
 
-        function showImage(index) {
-            // Hide all images
-            exampleImages.forEach(img => {
-                img.classList.remove('active');
-            });
-            // Show the selected image
-            exampleImages[index].classList.add('active');
-        }
-
-        // Automatically switch images every 10 seconds
+        // Switch slides every 15 seconds
         setInterval(() => {
-            currentIndex = (currentIndex + 1) % totalImages;
-            showImage(currentIndex);
-        }, 10000);
+            slides[currentSlide].classList.remove('active-slide');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active-slide');
+        }, 15000);
     </script>
     
 </body>
