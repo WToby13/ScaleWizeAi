@@ -413,50 +413,54 @@ section {
     }
 }
 
+/* ======================= */
+/*    NEW/UPDATED STYLES   */
+/* ======================= */
 
-/* Examples Section Styles */
-
-/* All images stacked on top of each other; only one is visible at a time */
-.examples-section {
+/* Solutions Slider */
+.solutions-section {
+    background-color: rgba(60, 60, 60, 0.5); /* Match the about-us background style */
     position: relative;
-    /* Put it above or overlapping nearby sections */
-    z-index: 3;
-    /* Adjust these negative margins so it overlaps hero and integrations */
-    margin-top: -500px;
-    margin-bottom: -200px;
-    padding: 60px 20px;
-    text-align: center;
-    background-color: transparent; /* Keep background see-through */
+    overflow: hidden;
 }
 
-.examples-slider {
+.slider-container {
     position: relative;
-    /* Constrain width so images look neat on page */
-    width: 90%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.slide img {
+    max-width: 300px;
     height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
-.example-image {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    max-width: 100%;
+.slide h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color-2);
 }
 
-/* The visible image has "active" class added dynamically by JavaScript */
-.example-image.active {
-    opacity: 1;
-    z-index: 2;
+.slide p {
+    max-width: 500px;
+    margin: 0 auto;
+    color: var(--text-color-3);
 }
 
-/* If you want a slight drop-shadow or glow behind the images, optional: */
-.example-image {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+.active-slide {
+    display: flex; /* Only the active slide is visible */
 }
 
 /* Integrations Section */
@@ -466,26 +470,18 @@ section {
     text-align: center;
 }
 
-/* Container to keep the title, subtitle, and image aligned at the same max width */
-.integrations-content {
-    max-width: 800px;  /* Adjust this width as needed */
-    margin: 0 auto;    /* Centers the container horizontally */
-    text-align: center; 
-}
-
 .integrations-subtitle {
     color: var(--text-color-2);
     margin-bottom: 20px;
 }
 
-/* Let the image fill the container width */
 .integrations-image {
+    max-width: 400px;
     width: 100%;
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
 }
-
 
 /* Ensure new sections also get the fade-in/appear behavior */
 .fade-in {
