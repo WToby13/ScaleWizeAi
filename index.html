@@ -40,6 +40,15 @@
         </div>
     </section>
 
+    <section id="examples" class="examples-section fade-in">
+        <h2 class="section-title">Examples of Our Solutions</h2>
+        <div class="examples-slider">
+            <img src="example1.png" alt="Example Diagram 1" class="example-image active">
+            <img src="example2.png" alt="Example Diagram 2" class="example-image">
+            <img src="example3.png" alt="Example Diagram 3" class="example-image">
+        </div>
+    </section>
+
     <section id="integrations" class="section integrations-section fade-in">
         <h2 class="section-title">Integrations</h2>
         <h3 class="integrations-subtitle">300+ integrations plus custom webhooks and http requests</h3>
@@ -155,19 +164,26 @@
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
         });
-    </script>
 
-        <!-- Script for Slider (rotates every 15 seconds) -->
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slider-container .slide');
+        // New script for Slider rotates every 10 seconds
+        let currentIndex = 0;
+        const exampleImages = document.querySelectorAll('.example-image');
+        const totalImages = exampleImages.length;
 
-        // Switch slides every 15 seconds
+        function showImage(index) {
+            // Hide all images
+            exampleImages.forEach(img => {
+                img.classList.remove('active');
+            });
+            // Show the selected image
+            exampleImages[index].classList.add('active');
+        }
+
+        // Automatically switch images every 10 seconds
         setInterval(() => {
-            slides[currentSlide].classList.remove('active-slide');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active-slide');
-        }, 15000);
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }, 10000);
     </script>
     
 </body>
