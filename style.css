@@ -417,6 +417,33 @@ section {
 /* Examples Section Styles */
 
 /* All images stacked on top of each other; only one is visible at a time */
+.examples-section {
+    position: relative;
+    /* Put it above or overlapping nearby sections */
+    z-index: 3;
+    /* Adjust these negative margins so it overlaps hero and integrations */
+    margin-top: -50px;
+    margin-bottom: -50px;
+    padding: 60px 20px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    background-color: transparent; /* Keep background see-through */
+}
+
+.examples-section .section-title {
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.examples-slider {
+    position: relative;
+    /* Constrain width so images look neat on page */
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: auto;
+}
+
 .example-image {
     position: absolute;
     top: 0;
