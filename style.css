@@ -413,6 +413,86 @@ section {
     }
 }
 
+/* ======================= */
+/*    NEW/UPDATED STYLES   */
+/* ======================= */
+
+/* Solutions Slider */
+.solutions-section {
+    background-color: rgba(60, 60, 60, 0.5); /* Match the about-us background style */
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.slide img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.slide h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color-2);
+}
+
+.slide p {
+    max-width: 500px;
+    margin: 0 auto;
+    color: var(--text-color-3);
+}
+
+.active-slide {
+    display: flex; /* Only the active slide is visible */
+}
+
+/* Integrations Section */
+.integrations-section {
+    background-color: rgba(60, 60, 60, 0.5);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.integrations-subtitle {
+    color: var(--text-color-2);
+    margin-bottom: 20px;
+}
+
+.integrations-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Ensure new sections also get the fade-in/appear behavior */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.appear {
+    opacity: 1;
+}
+
+
 /* CTA Section */
 .cta-section {
     background-color: var(--secondary-color);
@@ -464,6 +544,14 @@ section {
         z-index: 1000;
     }
 
+    .slide img {
+        max-width: 100%;
+    }
+
+    .animated-text {
+        font-size: 2.5rem; /* slightly smaller on mobile */
+    }
+
     .contact-button {
         display: none;
     }
@@ -476,6 +564,16 @@ section {
         display: block;
         text-align: center;
         margin-top: 10px;
+    }
+
+    /* Adjust heading sizes in solutions & integrations sections */
+    .solutions-section h2,
+    .integrations-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .slide h3 {
+        font-size: 1.25rem;
     }
 
     .founder {
