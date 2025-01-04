@@ -465,7 +465,6 @@ section {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-
 /* Integrations Section */
 .integrations-section {
     background-color: rgba(60, 60, 60, 0.5);
@@ -473,18 +472,26 @@ section {
     text-align: center;
 }
 
+/* Container to keep the title, subtitle, and image aligned at the same max width */
+.integrations-content {
+    max-width: 800px;  /* Adjust this width as needed */
+    margin: 0 auto;    /* Centers the container horizontally */
+    text-align: center; 
+}
+
 .integrations-subtitle {
     color: var(--text-color-2);
     margin-bottom: 20px;
 }
 
+/* Let the image fill the container width */
 .integrations-image {
-    max-width: 400px;
     width: 100%;
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
 }
+
 
 /* Ensure new sections also get the fade-in/appear behavior */
 .fade-in {
