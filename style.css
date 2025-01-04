@@ -413,55 +413,58 @@ section {
     }
 }
 
-/* ======================= */
-/*    NEW/UPDATED STYLES   */
-/* ======================= */
 
-/* Solutions Slider */
-.solutions-section {
-    background-color: rgba(60, 60, 60, 0.5); /* Match the about-us background style */
+/* Examples Section Styles */
+
+.examples-section {
     position: relative;
-    overflow: hidden;
+    /* Put it above or overlapping nearby sections */
+    z-index: 3;
+    /* Adjust these negative margins so it overlaps hero and integrations */
+    margin-top: -50px;
+    margin-bottom: -50px;
+    padding: 60px 20px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    background-color: transparent; /* Keep background see-through */
 }
 
-.slider-container {
+.examples-section .section-title {
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.examples-slider {
     position: relative;
+    /* Constrain width so images look neat on page */
+    width: 80%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-}
-
-.slide {
-    display: none; /* Hide all slides by default */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: opacity 0.6s ease-in-out;
-}
-
-.slide img {
-    max-width: 300px;
     height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
 }
 
-.slide h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: var(--text-color-2);
+/* All images stacked on top of each other; only one is visible at a time */
+.example-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    max-width: 100%;
 }
 
-.slide p {
-    max-width: 500px;
-    margin: 0 auto;
-    color: var(--text-color-3);
+/* The visible image has "active" class added dynamically by JavaScript */
+.example-image.active {
+    opacity: 1;
+    z-index: 2;
 }
 
-.active-slide {
-    display: flex; /* Only the active slide is visible */
+/* If you want a slight drop-shadow or glow behind the images, optional: */
+.example-image {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
+
 
 /* Integrations Section */
 .integrations-section {
