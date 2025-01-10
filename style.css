@@ -207,6 +207,41 @@ section {
     transition: margin-top 1s ease-in-out;
 }
 
+.poweredby-section {
+    background-color: rgba(60, 60, 60, 0.5); /* Match existing section style if desired */
+    padding: 40px 20px;
+    text-align: center;
+    /* fade-in animations already handled by .fade-in / .appear classes */
+}
+
+.poweredby-container {
+    max-width: 1000px; /* Adjust as you like */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Space between the image and text */
+    flex-wrap: wrap; /* Wrap on smaller screens */
+    margin-top: 30px;
+}
+
+.poweredby-image {
+    flex: 1;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.poweredby-text {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    text-align: left;
+    color: var(--text-color);
+    margin: 0 20px; 
+}
+
 /* section styling */
 .section {
     padding: 40px;
@@ -413,9 +448,15 @@ section {
     }
 }
 
-/* ======================= */
-/*    NEW/UPDATED STYLES   */
-/* ======================= */
+/* Poweredby section */
+.poweredby-container {
+    flex-direction: column; /* stack image and text vertically */
+    text-align: center;
+}
+.poweredby-text {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
 
 /* Solutions Slider */
 .solutions-section {
