@@ -235,7 +235,7 @@ section {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    max-width: 400px;          /* Optional max width for the image */
+    max-width: 250px;          /* Optional max width for the image */
 }
 
 .poweredby-text {
@@ -523,7 +523,7 @@ section {
 
 /* Let the image fill the container width */
 .integrations-image {
-    width: 100%;
+    width: 75%;
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
