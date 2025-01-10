@@ -152,6 +152,7 @@ header .logo img {
 .animated-text {
     font-size: 4rem;
     font-weight: bold;
+    align-items: left;
     margin: 0;
     color: var(--text-color-2);
 }
