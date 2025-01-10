@@ -135,7 +135,7 @@ header .logo img {
     justify-content: center;
     align-items: center;
     background: rgba(40, 40, 40, 0.9);
-    color: var(--text-color);
+    color: var(--btn-color);
     text-align: center;
     padding: 20px;
     opacity: 0;
@@ -154,7 +154,7 @@ header .logo img {
     font-weight: bold;
     align-items: left;
     margin: 0;
-    color: var(--text-color-2);
+    color: var( --text-color-2);
 }
 
 .hero-subtitle {
@@ -269,7 +269,7 @@ section {
 
 /* Mission Section */
 .mission-section {
-    padding: 5px 20px;
+    padding: 50px 20px;
     text-align: center;
     background-color: clear;
     margin-bottom: 5px;
