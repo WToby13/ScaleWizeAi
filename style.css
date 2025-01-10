@@ -146,7 +146,7 @@ header .logo img {
 .hero-content {
     z-index: 2;
     max-width: 800px;
-    padding: 20px;
+    padding: 5px;
 }
 
 .animated-text {
@@ -249,7 +249,7 @@ section {
 
 /* section styling */
 .section {
-    padding: 40px;
+    padding: 5px;
     text-align: center;
     color: var(--text-color);
     backdrop-filter: blur(5px);
@@ -268,7 +268,7 @@ section {
 
 /* Mission Section */
 .mission-section {
-    padding: 60px 20px;
+    padding: 5px 20px;
     text-align: center;
     background-color: clear;
     margin-bottom: 50px;
@@ -289,7 +289,7 @@ section {
 }
 
 .founders-section {
-    padding: 60px 20px;
+    padding: 5px 20px;
     text-align: center;
     background-color: clear;
 }
