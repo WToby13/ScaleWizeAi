@@ -270,7 +270,7 @@ section {
     padding: 5px 20px;
     text-align: center;
     background-color: clear;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 
 .mission-text {
@@ -358,7 +358,7 @@ section {
 /* Timeline Section Styling */
 .timeline-section {
     position: relative;
-    padding: 60px 20px;
+    padding: 20px 20px;
     background-color: clear;
     text-align: center;
 }
