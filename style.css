@@ -224,7 +224,6 @@ section {
     align-items: center;
     justify-content: space-between;
     gap: 30px;                 /* Space between columns */
-    margin-top: 30px;
 }
 
 .poweredby-col {
