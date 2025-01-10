@@ -255,9 +255,6 @@ section {
     background-color: clear;
 }
 
-#about-us {
-    background-color: rgba(60, 60, 60, 0.5);
-}
 
 #about-us h2, #about-us p {
     color: var(--text-color);
