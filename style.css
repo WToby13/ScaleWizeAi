@@ -248,7 +248,7 @@ section {
 
 /* section styling */
 .section {
-    padding: 5px;
+    padding: 40px;
     text-align: center;
     color: var(--text-color);
     backdrop-filter: blur(5px);
@@ -258,6 +258,10 @@ section {
 
 #about-us h2, #about-us p {
     color: var(--text-color);
+}
+
+#about-us {
+    background-color: rgba(60, 60, 60, 0.5);
 }
 
 /* Additional Styles for the New Features */
