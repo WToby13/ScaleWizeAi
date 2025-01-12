@@ -249,7 +249,7 @@ section {
 
 /* section styling */
 .section {
-    padding: 40px;
+    padding: 0px;
     text-align: center;
     color: var(--text-color);
     backdrop-filter: blur(5px);
