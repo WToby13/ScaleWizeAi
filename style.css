@@ -511,6 +511,7 @@ section {
 .integrations-content {
     max-width: 800px;  /* Adjust this width as needed */
     margin: 0 auto;    /* Centers the container horizontally */
+    margin-top: 50px;
     text-align: center; 
 }
 
