@@ -235,7 +235,7 @@ section {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    max-width: 250px;          /* Optional max width for the image */
+    max-width: 300px;          /* Optional max width for the image */
 }
 
 .poweredby-text {
