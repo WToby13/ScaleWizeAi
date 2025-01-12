@@ -253,7 +253,7 @@ section {
     text-align: center;
     color: var(--text-color);
     backdrop-filter: blur(5px);
-    background-color: clear;
+    background-color: rgba(60, 60, 60, 0.5);
 }
 
 
@@ -502,13 +502,13 @@ section {
 
 /* Integrations Section */
 .integrations-section {
-    padding: 0px 20px;
+    padding: 40px 20px;
     text-align: center;
+    background-color: rgba(60, 60, 60, 0.5);
 }
 
 /* Container to keep the title, subtitle, and image aligned at the same max width */
 .integrations-content {
-    background-color: rgba(60, 60, 60, 0.5);
     max-width: 800px;  /* Adjust this width as needed */
     margin: 0 auto;    /* Centers the container horizontally */
     margin-top: 50px;
