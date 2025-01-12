@@ -502,13 +502,13 @@ section {
 
 /* Integrations Section */
 .integrations-section {
-    background-color: rgba(60, 60, 60, 0.5);
     padding: 0px 20px;
     text-align: center;
 }
 
 /* Container to keep the title, subtitle, and image aligned at the same max width */
 .integrations-content {
+    background-color: rgba(60, 60, 60, 0.5);
     max-width: 800px;  /* Adjust this width as needed */
     margin: 0 auto;    /* Centers the container horizontally */
     margin-top: 50px;
