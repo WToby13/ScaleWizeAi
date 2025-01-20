@@ -261,6 +261,132 @@ section {
     color: var(--text-color);
 }
 
+/* ---------------------------------------
+   BLOG PAGE OVERRIDES
+-----------------------------------------*/
+
+/* Remove the animated gradient for the blog page, use a white background instead */
+.blog-page {
+    background-color: #ffffff !important;
+    color: #333 !important;
+    animation: none !important;
+    background-size: auto !important;
+}
+
+/* Simplify header styling on the blog page */
+.blog-page .header-container {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Make sure nav icons lay out horizontally (optional improvement) */
+.blog-page .nav-icons {
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* Container for the article content */
+.article-container {
+    max-width: 800px;
+    margin: 80px auto 40px auto; /* Extra top margin to accommodate fixed header */
+    padding: 20px;
+    background-color: #fff; /* ensure white behind text if needed */
+}
+
+/* Hero/Featured Image Section */
+.blog-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Title & Meta Info */
+.title-content h1 {
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.article-intro {
+    font-size: 1.1rem;
+    color: #444;
+    margin: 0 auto;
+    max-width: 700px; /* narrower paragraph for a more elegant intro */
+}
+
+/* Main Article Styling */
+.article-content h2 {
+    color: #222;
+    margin-top: 40px;
+}
+
+.article-content p {
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.article-content a {
+    color: #0069ff;
+    text-decoration: underline;
+}
+
+.article-content a:hover {
+    text-decoration: none;
+}
+
+/* Simple Share Section */
+.share-section {
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.share-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.share-container span {
+    font-weight: bold;
+}
+
+.share-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Tweaks for Smaller Screens */
+@media (max-width: 768px) {
+    .article-container {
+        margin: 120px auto 20px auto;
+        padding: 15px;
+    }
+
+    .title-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .article-content h2 {
+        font-size: 1.2rem;
+        margin-top: 30px;
+    }
+}
+
 
 
 /* Additional Styles for the New Features */
