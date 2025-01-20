@@ -262,38 +262,18 @@ section {
 }
 
 /* ---------------------------------------
-   BLOG PAGE OVERRIDES
+   ARTICLE PAGE / BLOG STYLING
 -----------------------------------------*/
 
-/* Remove the animated gradient for the blog page, use a white background instead */
-.blog-page {
-    background-color: #ffffff !important;
-    color: #333 !important;
-    animation: none !important;
-    background-size: auto !important;
-}
-
-/* Simplify header styling on the blog page */
-.blog-page .header-container {
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Make sure nav icons lay out horizontally (optional improvement) */
-.blog-page .nav-icons {
-    flex-direction: row;
-    gap: 10px;
-}
-
-/* Container for the article content */
+/* Main container for the article */
 .article-container {
     max-width: 800px;
-    margin: 80px auto 40px auto; /* Extra top margin to accommodate fixed header */
+    margin: 120px auto 40px auto; /* Enough top margin to clear fixed header */
     padding: 20px;
-    background-color: #fff; /* ensure white behind text if needed */
+    /* We keep the background as-is (dark gradient), so no separate bg color here */
 }
 
-/* Hero/Featured Image Section */
+/* Hero / Featured Image section */
 .blog-hero {
     text-align: center;
     margin-bottom: 40px;
@@ -306,52 +286,65 @@ section {
     margin-bottom: 20px;
 }
 
-/* Title & Meta Info */
+/* Title area */
 .title-content h1 {
-    color: #111;
+    color: var(--text-color); /* Light text on dark background */
     margin-bottom: 10px;
+    font-size: 2rem;
 }
 
 .article-meta {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--text-color-2); /* slightly different shade from your root colors if desired */
     margin-bottom: 15px;
 }
 
 .article-intro {
     font-size: 1.1rem;
-    color: #444;
+    color: var(--text-color); 
     margin: 0 auto;
-    max-width: 700px; /* narrower paragraph for a more elegant intro */
+    max-width: 700px;
+    margin-top: 15px;
 }
 
-/* Main Article Styling */
-.article-content h2 {
-    color: #222;
+/* Main Article Content */
+.article h2 {
+    color: var(--text-color);
     margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
 }
 
-.article-content p {
-    color: #333;
+.article p {
+    color: var(--text-color-3); /* If you have a light color stored in text-color-3. Otherwise use #fff or #eee */
     margin-bottom: 20px;
     line-height: 1.6;
 }
 
-.article-content a {
-    color: #0069ff;
+.article a {
+    color: #66afff; /* a slightly distinct link color on dark backgrounds */
     text-decoration: underline;
 }
 
-.article-content a:hover {
+.article a:hover {
     text-decoration: none;
 }
 
-/* Simple Share Section */
+/* Source list styling */
+.article ul {
+    padding-left: 20px;
+}
+
+.article ul li {
+    margin-bottom: 10px;
+    color: var(--text-color-3);
+}
+
+/* Simple share section at the bottom */
 .share-section {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     margin-top: 40px;
     padding: 20px;
-    background-color: #f8f8f8;
     text-align: center;
 }
 
@@ -363,6 +356,7 @@ section {
 
 .share-container span {
     font-weight: bold;
+    color: var(--text-color);
 }
 
 .share-icon img {
@@ -373,20 +367,23 @@ section {
 /* Responsive Tweaks for Smaller Screens */
 @media (max-width: 768px) {
     .article-container {
-        margin: 120px auto 20px auto;
+        margin: 100px auto 20px auto;
         padding: 15px;
     }
 
     .title-content h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
-    .article-content h2 {
+    .article-intro {
+        font-size: 1rem;
+    }
+
+    .article h2 {
         font-size: 1.2rem;
         margin-top: 30px;
     }
 }
-
 
 
 /* Additional Styles for the New Features */
