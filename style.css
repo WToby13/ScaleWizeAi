@@ -638,3 +638,87 @@ section {
         width: 100%;
     }
 }
+
+/* ------------------------------ */
+/* NEW / UPDATED ARTICLE STYLES   */
+/* ------------------------------ */
+
+/* Constrain article width and add spacing */
+.article-container {
+    max-width: 800px;
+    margin: 100px auto 60px auto; /* Leaves room for the fixed header at the top */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly transparent to help text readability */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Title section styling */
+.title-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+    color: var(--text-color-3);
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Meta info styling */
+.article-meta {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/* Intro / subtitle styling */
+.article-intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 2em;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Main article content styling */
+.article-content {
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+.article-content h2 {
+    font-size: 1.3rem;
+    color: var(--text-color-3);
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.3em;
+}
+
+.article-content p,
+.article-content ul {
+    margin-bottom: 1.5em;
+}
+
+.article-content a {
+    color: var(--btn-color);
+    text-decoration: underline;
+}
+
+/* Responsiveness for the article container */
+@media (max-width: 768px) {
+    .article-container {
+        margin-top: 80px;
+        padding: 10px;
+    }
+    .title-content h1 {
+        font-size: 1.5rem;
+    }
+    .article-intro {
+        font-size: 1rem;
+    }
+    .article-content h2 {
+        font-size: 1.2rem;
+    }
+}
+
