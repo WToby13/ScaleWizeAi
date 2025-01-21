@@ -648,7 +648,7 @@ section {
     max-width: 800px;
     margin: 100px auto 60px auto; /* Leaves room for the fixed header at the top */
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.3); /* Slightly transparent to help text readability */
+    background-color: rgba(0, 0, 0, 0.1); /* Slightly transparent to help text readability */
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
