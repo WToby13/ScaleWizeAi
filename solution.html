@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="bzqpdz6xKBZ3aItE_UQGjm48l1oDg4m7Zt1NjuhhZ8M" />
-    <title>ScaleWize Ai - Articles</title>
-    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScaleWize Ai - Recent Articles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div id="header-placeholder"></div>
     
+    <!-- Same Header as before -->
     <header>
         <div class="header-container">
             <div class="nav-icons">
                 <!-- Home Link -->
                 <a href="index.html" class="nav-icon">
-                    <img src="scalewizewhitelogo.png" alt="ScaleWise Logo">
+                    <img src="scalewizewhitelogo.png" alt="ScaleWise Logo" />
                     <span class="tooltip">Home</span>
                 </a>
                 <!-- Content Link -->
@@ -25,26 +25,83 @@
                     <span class="tooltip">Content</span>
                 </a>
             </div>
-            <!-- Book Consultation -->
-            <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/scalewizeai/30min'}); return false;" class="btn-contact">
-                Book Free Consultation
-            </a>
         </div>
     </header>
 
+    <!-- Articles Home Container -->
+    <div class="articles-home-container">
+        <h1 class="page-title">Latest Articles</h1>
+
+        <!-- Articles List -->
+        <div class="articles-list">
+            <!-- 1) MOST RECENT AT THE TOP -->
+            <div class="article-preview" onclick="location.href='https://scalewize.co/unlocking-potential:-how-ai-is-transforming-small-and-medium-businesses.html'" >
+                <h2>Unlocking Potential: How AI Is Transforming Small And Medium Businesses</h2>
+                <div class="article-meta">
+                    <span>By <strong>ScaleWize AI</strong></span> | 
+                    <span>January 21, 2025</span>
+                </div>
+                <p class="article-intro">
+                    Discover how AI is revolutionizing SMEs by automating routine tasks,
+                    reducing costs, and fueling sustainable growth. Explore success stories
+                    and learn strategies for seamless AI adoption in your own business.
+                </p>
+            </div>
+
+            <!-- 2) Another Example Article -->
+            <div class="article-preview" onclick="location.href='https://scalewize.co/example-article-2.html'" >
+                <h2>Example Article #2 Title</h2>
+                <div class="article-meta">
+                    <span>By <strong>ScaleWize AI</strong></span> | 
+                    <span>January 18, 2025</span>
+                </div>
+                <p class="article-intro">
+                    Brief intro paragraph here. This could tease the article’s main topic,
+                    intriguing readers to click and learn more.
+                </p>
+            </div>
+
+            <!-- 3) Another Example Article -->
+            <div class="article-preview" onclick="location.href='https://scalewize.co/example-article-3.html'" >
+                <h2>Example Article #3 Title</h2>
+                <div class="article-meta">
+                    <span>By <strong>ScaleWize AI</strong></span> | 
+                    <span>January 10, 2025</span>
+                </div>
+                <p class="article-intro">
+                    A quick overview of what the article covers. Keep it short to act as a
+                    summary or hook for potential readers.
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- Calendly badge widget begin -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/scalewizeai/30min', text: 'Book Free Consultation', color: '#0069ff', textColor: '#ffffff' }); }</script>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        Calendly.initBadgeWidget({ url: "https://calendly.com/scalewizeai/30min", text: "Book Free Consultation", color: "#0069ff", textColor: "#ffffff",
+        });
+      };
+    </script>
     <!-- Calendly badge widget end -->
 
-    <!-- Notion Content -->
-    <iframe 
-        src="https://v2-embednotion.com/14b2f0d60032803e8c8ef6691d798735" 
-        style="width: 100%; height: 1500px; position: relative; top: -40px; border: none;">
-    </iframe>
-
-
-
+    <!-- Call-to-Action Section -->
+    <section class="cta-section">
+        <div class="cta-title fade-in">
+            <h2>Streamline Your Operations With ScaleWize AI</h2>
+            <p>
+                Explore our suite of AI-powered solutions to maximize productivity, reduce costs,
+                and transform your business.
+            </p>
+            <h2>Empower your team. Start now.</h2>
+        </div>
+        <!-- Calendly link widget -->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/scalewizeai/30min'}); return false;" class="cta-button">Book Free Consultation</a >
+    </section>
 </body>
 </html>
+
