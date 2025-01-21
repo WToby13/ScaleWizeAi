@@ -639,8 +639,75 @@ section {
     }
 }
 
+/* ------------------------------------------ */
+/* NEW/UPDATED STYLES FOR THE ARTICLES HOME   */
+/* ------------------------------------------ */
+
+/* Container for all articles on the home page */
+.articles-home-container {
+  max-width: 800px;
+  margin: 100px auto 60px auto; /* space for fixed header at top */
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.3); /* subtle background overlay */
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Page title (e.g. "Latest Articles") */
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 1.5em;
+  text-align: center;
+  color: var(--text-color-3);
+}
+
+/* List container for article previews */
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* spacing between article previews */
+}
+
+/* Individual article preview container */
+.article-preview {
+  cursor: pointer; /* indicate clickable area */
+  padding: 20px;
+  background-color: rgba(40, 40, 40, 0.3);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect for clickable previews */
+.article-preview:hover {
+  background-color: rgba(40, 40, 40, 0.5);
+}
+
+/* Article preview title */
+.article-preview h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5em;
+  color: var(--text-color-3);
+}
+
+/* Meta info inside the preview */
+.article-preview .article-meta {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-bottom: 0.5em;
+}
+
+/* Article intro/summary in the preview */
+.article-preview .article-intro {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  margin: 0;
+  font-style: italic;
+}
+
 /* ------------------------------ */
-/* NEW / UPDATED ARTICLE STYLES   */
+/* ARTICLE STYLES   */
 /* ------------------------------ */
 
 /* Constrain article width and add spacing */
@@ -719,6 +786,21 @@ section {
     }
     .article-content h2 {
         font-size: 1.2rem;
+    }
+    .articles-home-container {
+        margin-top: 80px;
+        padding: 15px;
+    }
+    .page-title {
+        font-size: 1.8rem;
+        margin-bottom: 1em;
+    }
+    .article-preview h2 {
+        font-size: 1.2rem;
+    }
+
+    .articles-list {
+        gap: 20px;
     }
 }
 
