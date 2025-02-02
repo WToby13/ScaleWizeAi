@@ -150,9 +150,10 @@ header .logo img {
 }
 
 .animated-text {
+    font-family: 'oswald', regular;
     font-size: 4rem;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     align-items: left;
     margin: 0;
     color: var( --text-color-2);
