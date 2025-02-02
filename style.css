@@ -518,7 +518,7 @@ section {
 
 /* The small logo image in each tab */
 .agent-logo {
-  width: 60px;   /* adjust as needed */
+  width: 160px;   /* adjust as needed */
   height: auto;
   border-radius: 6px; /* optional for slightly rounder image corners */
   flex-shrink: 0;
