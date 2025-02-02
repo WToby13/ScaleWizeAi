@@ -450,6 +450,83 @@ section {
     }
 }
 
+/******************************************/
+/* TABBED SECTION FOR AI AGENTS           */
+/******************************************/
+.ai-agents-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: rgba(60, 60, 60, 0.5);
+  margin-top: 40px;
+}
+
+/* Container for the tab buttons */
+.tab {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Style each tab button */
+.tab button {
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 20px;
+  margin: 5px;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+  font-size: 1rem;
+}
+
+/* Hover effect for tab buttons */
+.tab button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Active tab button styles */
+.tab button.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 3px solid var(--btn-color);
+  font-weight: bold;
+}
+
+/* Tab content boxes */
+.tabcontent {
+  display: none; /* Hidden by default; shown by JS */
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-color);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Heading inside each tab content */
+.tabcontent h3 {
+  margin-top: 0;
+  color: var(--btn-color);
+}
+
+/* Make the section title stand out */
+#ai-agents .section-title {
+  margin-bottom: 20px;
+  color: var(--text-color-3);
+}
+
+/* Responsive adjustment: stack buttons if needed */
+@media (max-width: 768px) {
+  .tab button {
+    margin: 5px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+
 
 /* Solutions Slider */
 .solutions-section {
