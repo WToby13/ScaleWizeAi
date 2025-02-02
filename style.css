@@ -451,7 +451,7 @@ section {
 }
 
 /******************************************/
-/* TABBED SECTION FOR AI AGENTS           */
+/* UPDATED TABBED SECTION FOR AI AGENTS   */
 /******************************************/
 .ai-agents-section {
   padding: 40px 20px;
@@ -465,7 +465,8 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; /* allows wrapping on smaller screens */
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  /* remove the gray line (border) underneath */
+  border-bottom: none;
   margin-bottom: 20px;
 }
 
@@ -478,8 +479,10 @@ section {
   cursor: pointer;
   padding: 12px 20px;
   margin: 5px;
-  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+  transition: background-color 0.3s ease;
   font-size: 1rem;
+  /* Make corners rounder */
+  border-radius: 12px; 
 }
 
 /* Hover effect for tab buttons */
@@ -506,6 +509,21 @@ section {
   padding: 20px;
 }
 
+/* Layout for the image + text inside each tab */
+.agent-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; /* space between image and text */
+}
+
+/* The small logo image in each tab */
+.agent-logo {
+  width: 60px;   /* adjust as needed */
+  height: auto;
+  border-radius: 6px; /* optional for slightly rounder image corners */
+  flex-shrink: 0;
+}
+
 /* Heading inside each tab content */
 .tabcontent h3 {
   margin-top: 0;
@@ -518,14 +536,20 @@ section {
   color: var(--text-color-3);
 }
 
-/* Responsive adjustment: stack buttons if needed */
+/* Responsive: stack buttons if needed */
 @media (max-width: 768px) {
   .tab button {
     margin: 5px 10px;
     font-size: 0.9rem;
   }
+  .agent-content {
+    flex-direction: column; /* stack the image above text */
+    align-items: center;
+  }
+  .agent-logo {
+    margin-bottom: 10px;
+  }
 }
-
 
 
 /* Solutions Slider */
